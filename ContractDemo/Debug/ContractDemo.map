@@ -1,0 +1,207 @@
+
+分配公共符号
+公共符号            大小              文件
+
+ADDR_HEADER         0x8               ./confident_contract/hal.o
+mtd_param_count     0x4               ./confident_contract/hal.o
+
+舍弃的输入节
+
+ .text          0x0000000000000000        0x0 ./init/startup.o
+ .data          0x0000000000000000        0x0 ./init/startup.o
+ .bss           0x0000000000000000        0x0 ./init/startup.o
+ .group         0x0000000000000000        0x8 ./confident_contract/hal.o
+ .group         0x0000000000000000        0x8 ./confident_contract/hal.o
+ .group         0x0000000000000000        0x8 ./confident_contract/hal.o
+ .group         0x0000000000000000        0x8 ./confident_contract/hal.o
+ .group         0x0000000000000000        0x8 ./confident_contract/hal.o
+ .group         0x0000000000000000        0x8 ./confident_contract/hal.o
+ .group         0x0000000000000000        0x8 ./confident_contract/hal.o
+ .data          0x0000000000000000        0x0 ./confident_contract/hal.o
+ .bss           0x0000000000000000        0x0 ./confident_contract/hal.o
+ .sdata         0x0000000000000000       0x28 ./confident_contract/hal.o
+ .group         0x0000000000000000        0x8 ./confident_contract/main.o
+ .group         0x0000000000000000        0x8 ./confident_contract/main.o
+ .group         0x0000000000000000        0x8 ./confident_contract/main.o
+ .group         0x0000000000000000        0x8 ./confident_contract/main.o
+ .group         0x0000000000000000        0x8 ./confident_contract/main.o
+ .group         0x0000000000000000        0x8 ./confident_contract/main.o
+ .group         0x0000000000000000        0x8 ./confident_contract/main.o
+ .text          0x0000000000000000        0x0 ./confident_contract/main.o
+ .data          0x0000000000000000        0x0 ./confident_contract/main.o
+ .bss           0x0000000000000000        0x0 ./confident_contract/main.o
+ .debug_macro   0x0000000000000000      0x760 ./confident_contract/main.o
+ .debug_macro   0x0000000000000000       0x22 ./confident_contract/main.o
+ .debug_macro   0x0000000000000000       0x87 ./confident_contract/main.o
+ .debug_macro   0x0000000000000000       0x51 ./confident_contract/main.o
+ .debug_macro   0x0000000000000000       0xe9 ./confident_contract/main.o
+ .debug_macro   0x0000000000000000       0x6a ./confident_contract/main.o
+ .debug_macro   0x0000000000000000      0x1df ./confident_contract/main.o
+ .group         0x0000000000000000        0x8 ./confident_contract/test.o
+ .group         0x0000000000000000        0x8 ./confident_contract/test.o
+ .group         0x0000000000000000        0x8 ./confident_contract/test.o
+ .group         0x0000000000000000        0x8 ./confident_contract/test.o
+ .group         0x0000000000000000        0x8 ./confident_contract/test.o
+ .group         0x0000000000000000        0x8 ./confident_contract/test.o
+ .group         0x0000000000000000        0x8 ./confident_contract/test.o
+ .data          0x0000000000000000        0x0 ./confident_contract/test.o
+ .bss           0x0000000000000000        0x0 ./confident_contract/test.o
+ .sdata         0x0000000000000000       0x18 ./confident_contract/test.o
+ .debug_macro   0x0000000000000000      0x760 ./confident_contract/test.o
+ .debug_macro   0x0000000000000000       0x22 ./confident_contract/test.o
+ .debug_macro   0x0000000000000000       0x87 ./confident_contract/test.o
+ .debug_macro   0x0000000000000000       0x51 ./confident_contract/test.o
+ .debug_macro   0x0000000000000000       0xe9 ./confident_contract/test.o
+ .debug_macro   0x0000000000000000       0x6a ./confident_contract/test.o
+ .debug_macro   0x0000000000000000      0x1df ./confident_contract/test.o
+
+内存配置
+
+名称           来源             长度             属性
+ilm              0x0000000010002000 0x0000000000006000
+dlm              0x0000000010010000 0x0000000000002000
+stk              0x0000000010013000 0x0000000000001000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+链结器命令稿和内存映射
+
+LOAD ./init/startup.o
+LOAD ./confident_contract/hal.o
+LOAD ./confident_contract/main.o
+LOAD ./confident_contract/test.o
+LOAD /home/boom/projects/hd/riscv-multilib-toolchain/bin/../lib/gcc/riscv64-unknown-elf/7.2.0/libgcc.a
+START GROUP
+LOAD /home/boom/projects/hd/riscv-multilib-toolchain/bin/../lib/gcc/riscv64-unknown-elf/7.2.0/../../../../riscv64-unknown-elf/lib/libc.a
+LOAD /home/boom/projects/hd/riscv-multilib-toolchain/bin/../lib/gcc/riscv64-unknown-elf/7.2.0/../../../../riscv64-unknown-elf/lib/libgloss.a
+END GROUP
+LOAD /home/boom/projects/hd/riscv-multilib-toolchain/bin/../lib/gcc/riscv64-unknown-elf/7.2.0/libgcc.a
+
+.text           0x0000000010002000     0x147c
+ *(.text.init)
+ .text.init     0x0000000010002000       0x9a ./init/startup.o
+                0x0000000010002000                _start
+ *(.text, .text.*)
+ .text.startup  0x000000001000209a       0x28 ./confident_contract/main.o
+                0x000000001000209a                main
+ *(.rodata)
+ *fill*         0x00000000100020c2        0x6 
+ .rodata        0x00000000100020c8      0x180 ./confident_contract/test.o
+                0x00000000100020c8                BEIJING_DISTRICT
+                0x00000000100021a8                BEIJING_DISTRICT_PRICE
+                0x0000000010002228                flist
+ *(.rodata.*)
+ .rodata.str1.8
+                0x0000000010002248      0x1e8 ./confident_contract/test.o
+                                        0x1e2 (松开之前的大小)
+ .text          0x0000000010002430      0x630 ./confident_contract/hal.o
+                0x000000001000262a                HAL_GetArgs
+                0x0000000010002750                HAL_GetStateAt
+                0x0000000010002780                HAL_GetState
+                0x00000000100027b2                HAL_PutState
+                0x0000000010002968                HAL_SetErrCode
+                0x000000001000297e                HAL_SetStatusCode
+                0x0000000010002994                HAL_SetExecCount
+                0x00000000100029b0                HAL_SetResultInfo
+                0x0000000010002a0c                HAL_SetLogInfo
+ .text          0x0000000010002a60      0xa1c ./confident_contract/test.o
+                0x0000000010002a60                f0
+                0x0000000010002be4                num2str
+                0x0000000010002c5c                assemble_sql
+                0x0000000010002d78                is_exception
+                0x0000000010002ed0                BAEC_strcmp
+                0x0000000010002eda                get_price
+                0x0000000010002f30                is_mortagage
+                0x000000001000302e                classify
+                0x00000000100030ae                f1
+
+.rela.dyn       0x0000000010003480        0x0
+ .rela.text.init
+                0x0000000010003480        0x0 ./init/startup.o
+ .rela.text     0x0000000010003480        0x0 ./init/startup.o
+ .rela.text.startup
+                0x0000000010003480        0x0 ./init/startup.o
+
+.data
+ *(.data)
+
+.bss            0x0000000010010000        0xc
+ *(.bss)
+ COMMON         0x0000000010010000        0xc ./confident_contract/hal.o
+                0x0000000010010000                ADDR_HEADER
+                0x0000000010010008                mtd_param_count
+
+.stack          0x0000000010013000     0x1000
+                0x0000000010014000                . = (. + LENGTH (stk))
+ *fill*         0x0000000010013000     0x1000 
+                0x0000000010014000                PROVIDE (_stack, .)
+OUTPUT(ContractDemo.elf elf64-littleriscv)
+
+.debug_line     0x0000000000000000     0x14aa
+ .debug_line    0x0000000000000000       0x6b ./init/startup.o
+ .debug_line    0x000000000000006b      0x84f ./confident_contract/hal.o
+ .debug_line    0x00000000000008ba      0x23b ./confident_contract/main.o
+ .debug_line    0x0000000000000af5      0x9b5 ./confident_contract/test.o
+
+.debug_info     0x0000000000000000     0x221c
+ .debug_info    0x0000000000000000       0x2e ./init/startup.o
+ .debug_info    0x000000000000002e      0xb99 ./confident_contract/hal.o
+ .debug_info    0x0000000000000bc7      0x131 ./confident_contract/main.o
+ .debug_info    0x0000000000000cf8     0x1524 ./confident_contract/test.o
+
+.debug_abbrev   0x0000000000000000      0x653
+ .debug_abbrev  0x0000000000000000       0x14 ./init/startup.o
+ .debug_abbrev  0x0000000000000014      0x2c7 ./confident_contract/hal.o
+ .debug_abbrev  0x00000000000002db       0xb4 ./confident_contract/main.o
+ .debug_abbrev  0x000000000000038f      0x2c4 ./confident_contract/test.o
+
+.debug_aranges  0x0000000000000000       0xc0
+ .debug_aranges
+                0x0000000000000000       0x30 ./init/startup.o
+ .debug_aranges
+                0x0000000000000030       0x30 ./confident_contract/hal.o
+ .debug_aranges
+                0x0000000000000060       0x30 ./confident_contract/main.o
+ .debug_aranges
+                0x0000000000000090       0x30 ./confident_contract/test.o
+
+.debug_str      0x0000000000000000     0x3705
+ .debug_str     0x0000000000000000       0x69 ./init/startup.o
+ .debug_str     0x0000000000000069     0x337d ./confident_contract/hal.o
+                                       0x352a (松开之前的大小)
+ .debug_str     0x00000000000033e6       0x61 ./confident_contract/main.o
+                                       0x33dd (松开之前的大小)
+ .debug_str     0x0000000000003447      0x2be ./confident_contract/test.o
+                                       0x3692 (松开之前的大小)
+
+.debug_loc      0x0000000000000000     0x3245
+ .debug_loc     0x0000000000000000     0x2040 ./confident_contract/hal.o
+ .debug_loc     0x0000000000002040       0xab ./confident_contract/main.o
+ .debug_loc     0x00000000000020eb     0x115a ./confident_contract/test.o
+
+.debug_ranges   0x0000000000000000      0x5a0
+ .debug_ranges  0x0000000000000000      0x3d0 ./confident_contract/hal.o
+ .debug_ranges  0x00000000000003d0       0x20 ./confident_contract/main.o
+ .debug_ranges  0x00000000000003f0      0x1b0 ./confident_contract/test.o
+
+.debug_macro    0x0000000000000000      0xcc9
+ .debug_macro   0x0000000000000000       0x63 ./confident_contract/hal.o
+ .debug_macro   0x0000000000000063      0x760 ./confident_contract/hal.o
+ .debug_macro   0x00000000000007c3       0x22 ./confident_contract/hal.o
+ .debug_macro   0x00000000000007e5       0x87 ./confident_contract/hal.o
+ .debug_macro   0x000000000000086c       0x51 ./confident_contract/hal.o
+ .debug_macro   0x00000000000008bd       0xe9 ./confident_contract/hal.o
+ .debug_macro   0x00000000000009a6       0x6a ./confident_contract/hal.o
+ .debug_macro   0x0000000000000a10      0x1df ./confident_contract/hal.o
+ .debug_macro   0x0000000000000bef       0x6d ./confident_contract/main.o
+ .debug_macro   0x0000000000000c5c       0x6d ./confident_contract/test.o
+
+.comment        0x0000000000000000       0x11
+ .comment       0x0000000000000000       0x11 ./confident_contract/hal.o
+                                         0x12 (松开之前的大小)
+ .comment       0x0000000000000011       0x12 ./confident_contract/main.o
+ .comment       0x0000000000000011       0x12 ./confident_contract/test.o
+
+.debug_frame    0x0000000000000000      0x390
+ .debug_frame   0x0000000000000000      0x168 ./confident_contract/hal.o
+ .debug_frame   0x0000000000000168       0x28 ./confident_contract/main.o
+ .debug_frame   0x0000000000000190      0x200 ./confident_contract/test.o

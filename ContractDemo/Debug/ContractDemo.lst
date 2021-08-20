@@ -1,0 +1,2865 @@
+
+ContractDemo.elf：     文件格式 elf64-littleriscv
+ContractDemo.elf
+体系结构：riscv:rv64， 标志 0x00000112：
+EXEC_P, HAS_SYMS, D_PAGED
+起始地址 0x0000000010002000
+
+程序头：
+    LOAD off    0x0000000000001000 vaddr 0x0000000010002000 paddr 0x0000000010002000 align 2**12
+         filesz 0x000000000000147c memsz 0x000000000000147c flags r-x
+    LOAD off    0x0000000000003000 vaddr 0x0000000010010000 paddr 0x0000000010010000 align 2**12
+         filesz 0x0000000000000000 memsz 0x000000000000000c flags rw-
+    LOAD off    0x0000000000003000 vaddr 0x0000000010013000 paddr 0x0000000010013000 align 2**12
+         filesz 0x0000000000000000 memsz 0x0000000000001000 flags rw-
+
+节：
+Idx Name           Size      VMA               LMA               File off  Algn  标志
+  0 .text          0000147c  0000000010002000  0000000010002000  00001000  2**3  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .stack         00001000  0000000010013000  0000000010013000  00003000  2**0  ALLOC
+  2 .debug_line    000014aa  0000000000000000  0000000000000000  0000247c  2**0  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info    0000221c  0000000000000000  0000000000000000  00003926  2**0  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev  00000653  0000000000000000  0000000000000000  00005b42  2**0  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 000000c0  0000000000000000  0000000000000000  000061a0  2**4  CONTENTS, READONLY, DEBUGGING
+  6 .debug_str     00003705  0000000000000000  0000000000000000  00006260  2**0  CONTENTS, READONLY, DEBUGGING
+  7 .debug_loc     00003245  0000000000000000  0000000000000000  00009965  2**0  CONTENTS, READONLY, DEBUGGING
+  8 .debug_ranges  000005a0  0000000000000000  0000000000000000  0000cbaa  2**0  CONTENTS, READONLY, DEBUGGING
+  9 .debug_macro   00000cc9  0000000000000000  0000000000000000  0000d14a  2**0  CONTENTS, READONLY, DEBUGGING
+ 10 .comment       00000011  0000000000000000  0000000000000000  0000de13  2**0  CONTENTS, READONLY
+ 11 .debug_frame   00000390  0000000000000000  0000000000000000  0000de28  2**3  CONTENTS, READONLY, DEBUGGING
+ 12 .bss           0000000c  0000000010010000  0000000010010000  00003000  2**3  ALLOC
+SYMBOL TABLE:
+0000000010002000 l    d  .text	0000000000000000 .text
+0000000010013000 l    d  .stack	0000000000000000 .stack
+0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
+0000000000000000 l    d  .debug_info	0000000000000000 .debug_info
+0000000000000000 l    d  .debug_abbrev	0000000000000000 .debug_abbrev
+0000000000000000 l    d  .debug_aranges	0000000000000000 .debug_aranges
+0000000000000000 l    d  .debug_str	0000000000000000 .debug_str
+0000000000000000 l    d  .debug_loc	0000000000000000 .debug_loc
+0000000000000000 l    d  .debug_ranges	0000000000000000 .debug_ranges
+0000000000000000 l    d  .debug_macro	0000000000000000 .debug_macro
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000 l    d  .debug_frame	0000000000000000 .debug_frame
+0000000010010000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    df *ABS*	0000000000000000 main.c
+0000000000000000 l    df *ABS*	0000000000000000 test.c
+0000000010002ba4 l     F .text	0000000000000040 BAEC_strcmp.part.0
+0000000000000000 l    df *ABS*	0000000000000000 hal.c
+0000000010002430 l     F .text	00000000000001fa HAL_GetStateAt.part.0
+0000000010002ed0 g     F .text	000000000000000a BAEC_strcmp
+0000000010002eda g     F .text	0000000000000056 get_price
+000000001000262a g     F .text	0000000000000126 HAL_GetArgs
+000000001000297e g     F .text	0000000000000016 HAL_SetStatusCode
+0000000010002c5c g     F .text	000000000000011c assemble_sql
+0000000010002be4 g     F .text	0000000000000078 num2str
+00000000100027b2 g     F .text	00000000000001b6 HAL_PutState
+0000000010002750 g     F .text	0000000000000030 HAL_GetStateAt
+00000000100021a8 g     O .text	0000000000000080 BEIJING_DISTRICT_PRICE
+0000000010002968 g     F .text	0000000000000016 HAL_SetErrCode
+0000000010002000 g       .text	0000000000000000 _start
+000000001000209a g     F .text	0000000000000028 main
+0000000010010000 g     O .bss	0000000000000008 ADDR_HEADER
+0000000010010008 g     O .bss	0000000000000004 mtd_param_count
+0000000010002a60 g     F .text	0000000000000144 f0
+0000000010002a0c g     F .text	0000000000000054 HAL_SetLogInfo
+0000000010002228 g     O .text	0000000000000020 flist
+0000000010002d78 g     F .text	0000000000000158 is_exception
+000000001000302e g     F .text	0000000000000080 classify
+0000000010002780 g     F .text	0000000000000032 HAL_GetState
+00000000100030ae g     F .text	00000000000003ce f1
+00000000100020c8 g     O .text	00000000000000e0 BEIJING_DISTRICT
+00000000100029b0 g     F .text	000000000000005c HAL_SetResultInfo
+0000000010014000 g       .stack	0000000000000000 _stack
+0000000010002994 g     F .text	000000000000001c HAL_SetExecCount
+0000000010002f30 g     F .text	00000000000000fe is_mortagage
+
+
+
+Disassembly of section .text:
+
+0000000010002000 <_start>:
+_start():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../init/startup.S:74
+.endm
+
+.section .text.init
+	.global _start
+_start:
+	addi t6, sp, 0
+    10002000:	00010f93          	mv	t6,sp
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../init/startup.S:75
+	la sp, _stack
+    10002004:	00012117          	auipc	sp,0x12
+    10002008:	ffc10113          	addi	sp,sp,-4 # 10014000 <_stack>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../init/startup.S:76
+	SAVECTX
+    1000200c:	f0810113          	addi	sp,sp,-248
+    10002010:	e006                	sd	ra,0(sp)
+    10002012:	e40a                	sd	sp,8(sp)
+    10002014:	e80e                	sd	gp,16(sp)
+    10002016:	ec12                	sd	tp,24(sp)
+    10002018:	f016                	sd	t0,32(sp)
+    1000201a:	f41a                	sd	t1,40(sp)
+    1000201c:	f81e                	sd	t2,48(sp)
+    1000201e:	fc22                	sd	s0,56(sp)
+    10002020:	e0a6                	sd	s1,64(sp)
+    10002022:	e4aa                	sd	a0,72(sp)
+    10002024:	e8ae                	sd	a1,80(sp)
+    10002026:	ecb2                	sd	a2,88(sp)
+    10002028:	f0b6                	sd	a3,96(sp)
+    1000202a:	f4ba                	sd	a4,104(sp)
+    1000202c:	f8be                	sd	a5,112(sp)
+    1000202e:	fcc2                	sd	a6,120(sp)
+    10002030:	e146                	sd	a7,128(sp)
+    10002032:	e54a                	sd	s2,136(sp)
+    10002034:	e94e                	sd	s3,144(sp)
+    10002036:	ed52                	sd	s4,152(sp)
+    10002038:	f156                	sd	s5,160(sp)
+    1000203a:	f55a                	sd	s6,168(sp)
+    1000203c:	f95e                	sd	s7,176(sp)
+    1000203e:	fd62                	sd	s8,184(sp)
+    10002040:	e1e6                	sd	s9,192(sp)
+    10002042:	e5ea                	sd	s10,200(sp)
+    10002044:	e9ee                	sd	s11,208(sp)
+    10002046:	edf2                	sd	t3,216(sp)
+    10002048:	f1f6                	sd	t4,224(sp)
+    1000204a:	f5fa                	sd	t5,232(sp)
+    1000204c:	f9fe                	sd	t6,240(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../init/startup.S:77
+	jal main
+    1000204e:	04c000ef          	jal	ra,1000209a <main>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../init/startup.S:78
+	RESTORECTX
+    10002052:	6082                	ld	ra,0(sp)
+    10002054:	6122                	ld	sp,8(sp)
+    10002056:	61c2                	ld	gp,16(sp)
+    10002058:	6262                	ld	tp,24(sp)
+    1000205a:	7282                	ld	t0,32(sp)
+    1000205c:	7322                	ld	t1,40(sp)
+    1000205e:	73c2                	ld	t2,48(sp)
+    10002060:	7462                	ld	s0,56(sp)
+    10002062:	6486                	ld	s1,64(sp)
+    10002064:	6526                	ld	a0,72(sp)
+    10002066:	65c6                	ld	a1,80(sp)
+    10002068:	6666                	ld	a2,88(sp)
+    1000206a:	7686                	ld	a3,96(sp)
+    1000206c:	7726                	ld	a4,104(sp)
+    1000206e:	77c6                	ld	a5,112(sp)
+    10002070:	7866                	ld	a6,120(sp)
+    10002072:	688a                	ld	a7,128(sp)
+    10002074:	692a                	ld	s2,136(sp)
+    10002076:	69ca                	ld	s3,144(sp)
+    10002078:	6a6a                	ld	s4,152(sp)
+    1000207a:	7a8a                	ld	s5,160(sp)
+    1000207c:	7b2a                	ld	s6,168(sp)
+    1000207e:	7bca                	ld	s7,176(sp)
+    10002080:	7c6a                	ld	s8,184(sp)
+    10002082:	6c8e                	ld	s9,192(sp)
+    10002084:	6d2e                	ld	s10,200(sp)
+    10002086:	6dce                	ld	s11,208(sp)
+    10002088:	6e6e                	ld	t3,216(sp)
+    1000208a:	7e8e                	ld	t4,224(sp)
+    1000208c:	7f2e                	ld	t5,232(sp)
+    1000208e:	7fce                	ld	t6,240(sp)
+    10002090:	0f810113          	addi	sp,sp,248
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../init/startup.S:79
+	addi sp, t6, 0
+    10002094:	000f8113          	mv	sp,t6
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../init/startup.S:80
+	ret
+    10002098:	8082                	ret
+
+000000001000209a <main>:
+main():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/main.c:13
+{
+    funcp contract_method;
+
+    ADDR_HEADER = txdata_header;
+    mtd_param_count = mpc;
+    contract_method = flist[mtd_index];
+    1000209a:	1582                	slli	a1,a1,0x20
+    1000209c:	100027b7          	lui	a5,0x10002
+    100020a0:	22878793          	addi	a5,a5,552 # 10002228 <flist>
+    100020a4:	81f5                	srli	a1,a1,0x1d
+    100020a6:	95be                	add	a1,a1,a5
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/main.c:12
+    mtd_param_count = mpc;
+    100020a8:	1602                	slli	a2,a2,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/main.c:11
+    ADDR_HEADER = txdata_header;
+    100020aa:	100107b7          	lui	a5,0x10010
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/main.c:14
+    contract_method();
+    100020ae:	0005b303          	ld	t1,0(a1)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/main.c:12
+    mtd_param_count = mpc;
+    100020b2:	9201                	srli	a2,a2,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/main.c:11
+    ADDR_HEADER = txdata_header;
+    100020b4:	00a7b023          	sd	a0,0(a5) # 10010000 <ADDR_HEADER>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/main.c:12
+    mtd_param_count = mpc;
+    100020b8:	100107b7          	lui	a5,0x10010
+    100020bc:	00c7b423          	sd	a2,8(a5) # 10010008 <mtd_param_count>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/main.c:14
+    contract_method();
+    100020c0:	8302                	jr	t1
+    100020c2:	0000                	unimp
+    100020c4:	0000                	unimp
+	...
+
+00000000100020c8 <BEIJING_DISTRICT>:
+    100020c8:	6f64 676e 6863 6e65 7167 0075 0000 6978     dongchengqu...xi
+    100020d8:	6863 6e65 7167 0075 0000 0000 6863 6f61     chengqu.....chao
+    100020e8:	6179 676e 7571 0000 0000 6566 676e 6174     yangqu....fengta
+    100020f8:	7169 0075 0000 0000 6873 6a69 6e69 7367     iqu.....shijings
+    10002108:	6168 716e 0075 6168 6469 6169 716e 0075     hanqu.haidianqu.
+    10002118:	0000 0000 6873 6e75 6979 7571 0000 0000     ....shunyiqu....
+    10002128:	0000 6f74 676e 687a 756f 7571 0000 0000     ..tongzhouqu....
+    10002138:	6164 6978 676e 7571 0000 0000 0000 6166     daxingqu......fa
+    10002148:	676e 6873 6e61 7571 0000 0000 656d 746e     ngshanqu....ment
+    10002158:	756f 6f67 7175 0075 0000 6863 6e61 7067     ougouqu...changp
+    10002168:	6e69 7167 0075 0000 6970 676e 7567 7571     ingqu...pingguqu
+    10002178:	0000 0000 0000 696d 7579 716e 0075 0000     ......miyunqu...
+    10002188:	0000 0000 7568 6961 6f72 7175 0075 0000     ....huairouqu...
+    10002198:	0000 6179 716e 6e69 7167 0075 0000 0000     ..yanqingqu.....
+
+00000000100021a8 <BEIJING_DISTRICT_PRICE>:
+    100021a8:	4240 000f 0000 0000 4240 000f 0000 0000     @B......@B......
+    100021b8:	4240 000f 0000 0000 4240 000f 0000 0000     @B......@B......
+    100021c8:	8480 001e 0000 0000 8480 001e 0000 0000     ................
+    100021d8:	8480 001e 0000 0000 8480 001e 0000 0000     ................
+    100021e8:	c6c0 002d 0000 0000 c6c0 002d 0000 0000     ..-.......-.....
+    100021f8:	c6c0 002d 0000 0000 c6c0 002d 0000 0000     ..-.......-.....
+    10002208:	0900 003d 0000 0000 0900 003d 0000 0000     ..=.......=.....
+    10002218:	0900 003d 0000 0000 0900 003d 0000 0000     ..=.......=.....
+
+0000000010002228 <flist>:
+    10002228:	2a60 1000 0000 0000 30ae 1000 0000 0000     `*.......0......
+	...
+    10002248:	243a 633a 756f 746e 2a28 0029 0000 0000     :$:count(*).....
+    10002258:	7365 6174 6574 3a3a 6c71 7a72 686a 003d     estate::qlrzjh=.
+    10002268:	6c71 7a72 686a 0000 6567 2074 7261 2067     qlrzjh..get arg 
+    10002278:	6166 6c69 0000 0000 6567 2074 6f63 6e75     fail....get coun
+    10002288:	5f74 6572 7573 746c 6620 6961 006c 0000     t_result fail...
+    10002298:	3130 3332 3534 3736 3938 0000 0000 0000     0123456789......
+    100022a8:	7369 6176 696c 0064 6563 7472 6f6e 0000     isvalid.certno..
+    100022b8:	7365 6174 6574 0000 6567 2074 7369 6176     estate..get isva
+    100022c8:	696c 2064 6166 6c69 0000 0000 0000 0000     lid fail........
+    100022d8:	7369 645f 7369 6573 746e 0000 0000 0000     is_dissent......
+    100022e8:	6567 2074 7369 645f 7369 6573 746e 6620     get is_dissent f
+    100022f8:	6961 006c 0000 0000 7369 725f 7365 7274     ail.....is_restr
+    10002308:	6369 0074 0000 0000 6567 2074 7369 725f     ict.....get is_r
+    10002318:	7365 7274 6369 2074 6166 6c69 0000 0000     estrict fail....
+    10002328:	7369 6d5f 726f 6774 6761 0065 0000 0000     is_mortgage.....
+    10002338:	6567 2074 7369 6d5f 726f 6774 6761 2065     get is_mortgage 
+    10002348:	6166 6c69 0000 0000 7369 6d5f 726f 6674     fail....is_mortf
+    10002358:	726f 6365 7361 0074 6567 2074 7369 6d5f     orecast.get is_m
+    10002368:	726f 6674 726f 6365 7361 2074 6166 6c69     ortforecast fail
+	...
+    10002380:	202c 7365 6174 6574 6520 7473 6d69 7461     , estate estimat
+    10002390:	2065 6172 676e 2065 2032 7369 203a 0000     e range 2 is: ..
+    100023a0:	7365 6174 6574 6520 7473 6d69 7461 2065     estate estimate 
+    100023b0:	6172 676e 2065 2031 7369 203a 0000 0000     range 1 is: ....
+    100023c0:	6f63 6e75 2874 292a 0000 0000 0000 0000     count(*)........
+    100023d0:	6567 2074 6563 7472 6f6e 6620 6961 006c     get certno fail.
+    100023e0:	6c7a 0000 0000 0000 6567 2074 6964 7473     zl......get dist
+    100023f0:	6972 7463 6620 6961 006c 0000 0000 0000     rict fail.......
+    10002400:	7a6a 6a6d 0000 0000 6567 2074 7261 6165     jzmj....get area
+    10002410:	725f 7365 6c75 2074 6166 6c69 0000 0000     _result fail....
+    10002420:	2424 6563 7472 6f6e 005f 0000 0000 0000     $$certno_.......
+
+0000000010002430 <HAL_GetStateAt.part.0>:
+HAL_GetStateAt():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:99
+    if (klen <= 0 || klen > KEY_MAX_LEN || index < 0 ) {
+        HAL_SetErrCode(PARAM_LEN_ERROR);
+        return PARAM_LEN_ERROR;
+    }
+    volatile uint32_t *addr_offset = (uint32_t *) (ADDR_HEADER + sizeof(uint32_t));
+    addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t)*3 + KEY_MAX_LEN + VALUE_MAX_LEN) * mtd_param_count);
+    10002430:	100107b7          	lui	a5,0x10010
+    10002434:	0087a883          	lw	a7,8(a5) # 10010008 <mtd_param_count>
+    10002438:	40c00e13          	li	t3,1036
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:98
+    volatile uint32_t *addr_offset = (uint32_t *) (ADDR_HEADER + sizeof(uint32_t));
+    1000243c:	10010837          	lui	a6,0x10010
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:99
+    addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t)*3 + KEY_MAX_LEN + VALUE_MAX_LEN) * mtd_param_count);
+    10002440:	02089793          	slli	a5,a7,0x20
+    10002444:	9381                	srli	a5,a5,0x20
+    10002446:	03c787b3          	mul	a5,a5,t3
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:98
+    volatile uint32_t *addr_offset = (uint32_t *) (ADDR_HEADER + sizeof(uint32_t));
+    1000244a:	00083283          	ld	t0,0(a6) # 10010000 <ADDR_HEADER>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:107
+    volatile uint32_t *tx_arg_klen;
+    volatile uint32_t *tx_arg_vlen;
+    volatile char *tx_arg_key;
+    volatile char *tx_arg_value;
+    volatile uint32_t *empty_offset = (uint32_t *) -1;
+    for (int i = mtd_param_count; i < DATA_COUNT; i++) {
+    1000244e:	0ff00313          	li	t1,255
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:98
+    volatile uint32_t *addr_offset = (uint32_t *) (ADDR_HEADER + sizeof(uint32_t));
+    10002452:	00428813          	addi	a6,t0,4
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:99
+    addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t)*3 + KEY_MAX_LEN + VALUE_MAX_LEN) * mtd_param_count);
+    10002456:	97c2                	add	a5,a5,a6
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:107
+    for (int i = mtd_param_count; i < DATA_COUNT; i++) {
+    10002458:	1b134f63          	blt	t1,a7,10002616 <HAL_GetStateAt.part.0+0x1e6>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:111
+        tx_arg_flag = (uint32_t *)addr_offset;
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + sizeof(uint32_t));    // flag_len
+        tx_arg_klen = (uint32_t *)addr_offset;
+        if (*tx_arg_klen < 0 || *tx_arg_klen > KEY_MAX_LEN) {
+    1000245c:	0047a303          	lw	t1,4(a5)
+    10002460:	0047a303          	lw	t1,4(a5)
+    10002464:	20000f13          	li	t5,512
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:109
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + sizeof(uint32_t));    // flag_len
+    10002468:	00478e93          	addi	t4,a5,4
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:111
+        if (*tx_arg_klen < 0 || *tx_arg_klen > KEY_MAX_LEN) {
+    1000246c:	166f6463          	bltu	t5,t1,100025d4 <HAL_GetStateAt.part.0+0x1a4>
+    10002470:	0ff00313          	li	t1,255
+    10002474:	4113033b          	subw	t1,t1,a7
+    10002478:	1302                	slli	t1,t1,0x20
+    1000247a:	02035313          	srli	t1,t1,0x20
+    1000247e:	03c30333          	mul	t1,t1,t3
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:92
+uint32_t HAL_GetStateAt(char *k, uint32_t klen, char *v, uint32_t *vlen, uint32_t index)
+    10002482:	7179                	addi	sp,sp,-48
+    10002484:	f026                	sd	s1,32(sp)
+    10002486:	fff5849b          	addiw	s1,a1,-1
+    1000248a:	1482                	slli	s1,s1,0x20
+    1000248c:	ec4a                	sd	s2,24(sp)
+    1000248e:	9081                	srli	s1,s1,0x20
+    10002490:	f422                	sd	s0,40(sp)
+    10002492:	e84e                	sd	s3,16(sp)
+    10002494:	e452                	sd	s4,8(sp)
+    10002496:	933e                	add	t1,t1,a5
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:106
+    volatile uint32_t *empty_offset = (uint32_t *) -1;
+    10002498:	5f7d                	li	t5,-1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:115
+            HAL_SetErrCode(PARAM_LEN_ERROR);
+            return PARAM_LEN_ERROR;
+        }
+        if (empty_offset == (uint32_t *)-1 && *tx_arg_klen == 0) {
+    1000249a:	5ffd                	li	t6,-1
+    1000249c:	883e                	mv	a6,a5
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:100
+    int find = 0;
+    1000249e:	4901                	li	s2,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:120
+            empty_offset = (uint32_t *)((uint64_t)addr_offset - sizeof(uint32_t));
+        }
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + sizeof(uint32_t));  // klen_len
+        tx_arg_vlen = (uint32_t *)addr_offset;
+        if (*tx_arg_vlen < 0 || *tx_arg_vlen > VALUE_MAX_LEN) {
+    100024a0:	20000e13          	li	t3,512
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:129
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + sizeof(uint32_t));    // vlen_len
+        tx_arg_key = (char *)addr_offset;
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + KEY_MAX_LEN);
+        tx_arg_value = (char *)addr_offset;
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + VALUE_MAX_LEN);
+        if ((0xff & *tx_arg_flag) == READ_FLAG && klen == *tx_arg_klen) {
+    100024a4:	04000393          	li	t2,64
+    100024a8:	0485                	addi	s1,s1,1
+    100024aa:	40c30313          	addi	t1,t1,1036
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:115
+        if (empty_offset == (uint32_t *)-1 && *tx_arg_klen == 0) {
+    100024ae:	05ff0063          	beq	t5,t6,100024ee <HAL_GetStateAt.part.0+0xbe>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:120
+        if (*tx_arg_vlen < 0 || *tx_arg_vlen > VALUE_MAX_LEN) {
+    100024b2:	0087a883          	lw	a7,8(a5)
+    100024b6:	0087a883          	lw	a7,8(a5)
+    100024ba:	00878413          	addi	s0,a5,8
+    100024be:	051e6663          	bltu	t3,a7,1000250a <HAL_GetStateAt.part.0+0xda>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:129
+        if ((0xff & *tx_arg_flag) == READ_FLAG && klen == *tx_arg_klen) {
+    100024c2:	00082803          	lw	a6,0(a6)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:128
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + VALUE_MAX_LEN);
+    100024c6:	40c78893          	addi	a7,a5,1036
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:129
+        if ((0xff & *tx_arg_flag) == READ_FLAG && klen == *tx_arg_klen) {
+    100024ca:	0ff87813          	andi	a6,a6,255
+    100024ce:	06780063          	beq	a6,t2,1000252e <HAL_GetStateAt.part.0+0xfe>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:107
+    for (int i = mtd_param_count; i < DATA_COUNT; i++) {
+    100024d2:	08688f63          	beq	a7,t1,10002570 <HAL_GetStateAt.part.0+0x140>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:111
+        if (*tx_arg_klen < 0 || *tx_arg_klen > KEY_MAX_LEN) {
+    100024d6:	4107a803          	lw	a6,1040(a5)
+    100024da:	4107a803          	lw	a6,1040(a5)
+    100024de:	41078e93          	addi	t4,a5,1040
+    100024e2:	030e6463          	bltu	t3,a6,1000250a <HAL_GetStateAt.part.0+0xda>
+    100024e6:	87c6                	mv	a5,a7
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:128
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + VALUE_MAX_LEN);
+    100024e8:	8846                	mv	a6,a7
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:115
+        if (empty_offset == (uint32_t *)-1 && *tx_arg_klen == 0) {
+    100024ea:	fdff14e3          	bne	t5,t6,100024b2 <HAL_GetStateAt.part.0+0x82>
+    100024ee:	000ea883          	lw	a7,0(t4)
+    100024f2:	2881                	sext.w	a7,a7
+    100024f4:	fa089fe3          	bnez	a7,100024b2 <HAL_GetStateAt.part.0+0x82>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:120
+        if (*tx_arg_vlen < 0 || *tx_arg_vlen > VALUE_MAX_LEN) {
+    100024f8:	0087a883          	lw	a7,8(a5)
+    100024fc:	0087a883          	lw	a7,8(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:115
+        if (empty_offset == (uint32_t *)-1 && *tx_arg_klen == 0) {
+    10002500:	8f42                	mv	t5,a6
+    10002502:	00878413          	addi	s0,a5,8
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:120
+        if (*tx_arg_vlen < 0 || *tx_arg_vlen > VALUE_MAX_LEN) {
+    10002506:	fb1e7ee3          	bleu	a7,t3,100024c2 <HAL_GetStateAt.part.0+0x92>
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+
+uint32_t HAL_SetErrCode(uint32_t err)
+{
+    uint32_t *addr_offset = (uint32_t *) (ADDR_HEADER + sizeof(uint32_t));
+    addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t) *3 + KEY_MAX_LEN + VALUE_MAX_LEN) * DATA_COUNT + sizeof(uint64_t) + sizeof(uint32_t));
+    *(uint32_t *)addr_offset = err;
+    1000250a:	000417b7          	lui	a5,0x41
+    1000250e:	92be                	add	t0,t0,a5
+    10002510:	6785                	lui	a5,0x1
+    10002512:	bb97879b          	addiw	a5,a5,-1095
+HAL_GetStateAt():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:122
+            return PARAM_LEN_ERROR;
+    10002516:	6505                	lui	a0,0x1
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    10002518:	c0f2a823          	sw	a5,-1008(t0)
+HAL_GetStateAt():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:122
+            return PARAM_LEN_ERROR;
+    1000251c:	bb950513          	addi	a0,a0,-1095 # bb9 <_start-0x10001447>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:170
+}
+    10002520:	7422                	ld	s0,40(sp)
+    10002522:	7482                	ld	s1,32(sp)
+    10002524:	6962                	ld	s2,24(sp)
+    10002526:	69c2                	ld	s3,16(sp)
+    10002528:	6a22                	ld	s4,8(sp)
+    1000252a:	6145                	addi	sp,sp,48
+    1000252c:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:129
+        if ((0xff & *tx_arg_flag) == READ_FLAG && klen == *tx_arg_klen) {
+    1000252e:	000ea803          	lw	a6,0(t4)
+    10002532:	fb0590e3          	bne	a1,a6,100024d2 <HAL_GetStateAt.part.0+0xa2>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:131
+            for (int j = 0; j < klen; j++) {
+    10002536:	c595                	beqz	a1,10002562 <HAL_GetStateAt.part.0+0x132>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:133
+                if (flag) {
+    10002538:	00054983          	lbu	s3,0(a0)
+    1000253c:	00c7ce83          	lbu	t4,12(a5) # 100c <_start-0x10000ff4>
+    10002540:	00c78813          	addi	a6,a5,12
+    10002544:	f9d997e3          	bne	s3,t4,100024d2 <HAL_GetStateAt.part.0+0xa2>
+    10002548:	00950a33          	add	s4,a0,s1
+    1000254c:	a039                	j	1000255a <HAL_GetStateAt.part.0+0x12a>
+    1000254e:	00084983          	lbu	s3,0(a6)
+    10002552:	00054e83          	lbu	t4,0(a0)
+    10002556:	f7d99ee3          	bne	s3,t4,100024d2 <HAL_GetStateAt.part.0+0xa2>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:137
+                k++;
+    1000255a:	0505                	addi	a0,a0,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:136
+                tx_arg_key++;
+    1000255c:	0805                	addi	a6,a6,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:131
+            for (int j = 0; j < klen; j++) {
+    1000255e:	feaa18e3          	bne	s4,a0,1000254e <HAL_GetStateAt.part.0+0x11e>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:139
+            if (!flag && find++ == index) {
+    10002562:	0019081b          	addiw	a6,s2,1
+    10002566:	08e90363          	beq	s2,a4,100025ec <HAL_GetStateAt.part.0+0x1bc>
+    1000256a:	8942                	mv	s2,a6
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:107
+    for (int i = mtd_param_count; i < DATA_COUNT; i++) {
+    1000256c:	f66895e3          	bne	a7,t1,100024d6 <HAL_GetStateAt.part.0+0xa6>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:151
+    if (!find) {
+    10002570:	00090a63          	beqz	s2,10002584 <HAL_GetStateAt.part.0+0x154>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:169
+    return 0;
+    10002574:	4501                	li	a0,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:170
+}
+    10002576:	7422                	ld	s0,40(sp)
+    10002578:	7482                	ld	s1,32(sp)
+    1000257a:	6962                	ld	s2,24(sp)
+    1000257c:	69c2                	ld	s3,16(sp)
+    1000257e:	6a22                	ld	s4,8(sp)
+    10002580:	6145                	addi	sp,sp,48
+    10002582:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:152
+        if (empty_offset == (uint32_t *)-1) {
+    10002584:	57fd                	li	a5,-1
+    10002586:	02ff0d63          	beq	t5,a5,100025c0 <HAL_GetStateAt.part.0+0x190>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:157
+        *(uint32_t *)empty_offset = READ_FLAG | *tx_arg_flag;
+    1000258a:	000f2783          	lw	a5,0(t5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:159
+        *(uint32_t *)empty_offset = klen;
+    1000258e:	00bf2223          	sw	a1,4(t5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:161
+        empty_offset = (uint32_t  *)((uint64_t)empty_offset + sizeof(uint32_t));    // vlen_len
+    10002592:	00cf0713          	addi	a4,t5,12
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:157
+        *(uint32_t *)empty_offset = READ_FLAG | *tx_arg_flag;
+    10002596:	0407e793          	ori	a5,a5,64
+    1000259a:	00ff2023          	sw	a5,0(t5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:162
+        for (int i = 0; i < klen; i++) {
+    1000259e:	d9f9                	beqz	a1,10002574 <HAL_GetStateAt.part.0+0x144>
+    100025a0:	fff5879b          	addiw	a5,a1,-1
+    100025a4:	1782                	slli	a5,a5,0x20
+    100025a6:	9381                	srli	a5,a5,0x20
+    100025a8:	0785                	addi	a5,a5,1
+    100025aa:	97aa                	add	a5,a5,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:163
+            *(char *)empty_offset = *k;
+    100025ac:	00054683          	lbu	a3,0(a0)
+    100025b0:	0705                	addi	a4,a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:165
+            k++;
+    100025b2:	0505                	addi	a0,a0,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:163
+            *(char *)empty_offset = *k;
+    100025b4:	fed70fa3          	sb	a3,-1(a4)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:162
+        for (int i = 0; i < klen; i++) {
+    100025b8:	fef51ae3          	bne	a0,a5,100025ac <HAL_GetStateAt.part.0+0x17c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:169
+    return 0;
+    100025bc:	4501                	li	a0,0
+    100025be:	bf65                	j	10002576 <HAL_GetStateAt.part.0+0x146>
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    100025c0:	000417b7          	lui	a5,0x41
+    100025c4:	92be                	add	t0,t0,a5
+    100025c6:	3e900793          	li	a5,1001
+    100025ca:	c0f2a823          	sw	a5,-1008(t0)
+HAL_GetStateAt():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:154
+            return OOM_ERROR;
+    100025ce:	3e900513          	li	a0,1001
+    100025d2:	b7b9                	j	10002520 <HAL_GetStateAt.part.0+0xf0>
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    100025d4:	000417b7          	lui	a5,0x41
+    100025d8:	92be                	add	t0,t0,a5
+    100025da:	6785                	lui	a5,0x1
+    100025dc:	bb97879b          	addiw	a5,a5,-1095
+HAL_GetStateAt():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:113
+            return PARAM_LEN_ERROR;
+    100025e0:	6505                	lui	a0,0x1
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    100025e2:	c0f2a823          	sw	a5,-1008(t0)
+HAL_GetStateAt():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:113
+            return PARAM_LEN_ERROR;
+    100025e6:	bb950513          	addi	a0,a0,-1095 # bb9 <_start-0x10001447>
+    100025ea:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:140
+                *vlen = *tx_arg_vlen;
+    100025ec:	4018                	lw	a4,0(s0)
+    100025ee:	c298                	sw	a4,0(a3)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:141
+                for (int j = 0; j < *tx_arg_vlen; j++) {
+    100025f0:	4018                	lw	a4,0(s0)
+    100025f2:	2701                	sext.w	a4,a4
+    100025f4:	cf11                	beqz	a4,10002610 <HAL_GetStateAt.part.0+0x1e0>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:126
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + KEY_MAX_LEN);
+    100025f6:	20c78793          	addi	a5,a5,524 # 120c <_start-0x10000df4>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:141
+                for (int j = 0; j < *tx_arg_vlen; j++) {
+    100025fa:	4701                	li	a4,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:142
+                    *v = *tx_arg_value;
+    100025fc:	0007c683          	lbu	a3,0(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:143
+                    v++;
+    10002600:	0605                	addi	a2,a2,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:141
+                for (int j = 0; j < *tx_arg_vlen; j++) {
+    10002602:	2705                	addiw	a4,a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:142
+                    *v = *tx_arg_value;
+    10002604:	fed60fa3          	sb	a3,-1(a2)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:141
+                for (int j = 0; j < *tx_arg_vlen; j++) {
+    10002608:	4014                	lw	a3,0(s0)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:144
+                    tx_arg_value++;
+    1000260a:	0785                	addi	a5,a5,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:141
+                for (int j = 0; j < *tx_arg_vlen; j++) {
+    1000260c:	fed768e3          	bltu	a4,a3,100025fc <HAL_GetStateAt.part.0+0x1cc>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:146
+                v -= *tx_arg_vlen;
+    10002610:	401c                	lw	a5,0(s0)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:169
+    return 0;
+    10002612:	4501                	li	a0,0
+    10002614:	b731                	j	10002520 <HAL_GetStateAt.part.0+0xf0>
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    10002616:	000417b7          	lui	a5,0x41
+    1000261a:	92be                	add	t0,t0,a5
+    1000261c:	3e900793          	li	a5,1001
+    10002620:	c0f2a823          	sw	a5,-1008(t0)
+HAL_GetStateAt():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:154
+            return OOM_ERROR;
+    10002624:	3e900513          	li	a0,1001
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:170
+}
+    10002628:	8082                	ret
+
+000000001000262a <HAL_GetArgs>:
+HAL_GetArgs():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:31
+{
+    1000262a:	10010737          	lui	a4,0x10010
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:32
+    if (klen <= 0 || klen > KEY_MAX_LEN) {
+    1000262e:	fff5881b          	addiw	a6,a1,-1
+    10002632:	1ff00793          	li	a5,511
+    10002636:	00073f83          	ld	t6,0(a4) # 10010000 <ADDR_HEADER>
+    1000263a:	0907e563          	bltu	a5,a6,100026c4 <HAL_GetArgs+0x9a>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:42
+    for (int i = 0; i < mtd_param_count; i++) {
+    1000263e:	100107b7          	lui	a5,0x10010
+    10002642:	0087a703          	lw	a4,8(a5) # 10010008 <mtd_param_count>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:36
+    volatile uint32_t *addr_offset = (uint32_t *) (ADDR_HEADER + sizeof(uint32_t));  // tx_id
+    10002646:	004f8793          	addi	a5,t6,4
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:42
+    for (int i = 0; i < mtd_param_count; i++) {
+    1000264a:	c77d                	beqz	a4,10002738 <HAL_GetArgs+0x10e>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:46
+        if (*tx_arg_klen < 0 || *tx_arg_klen > KEY_MAX_LEN) {
+    1000264c:	008fa883          	lw	a7,8(t6)
+    10002650:	008fae03          	lw	t3,8(t6)
+    10002654:	20000313          	li	t1,512
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:44
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + sizeof(uint32_t));    // flag_len
+    10002658:	008f8893          	addi	a7,t6,8
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:46
+        if (*tx_arg_klen < 0 || *tx_arg_klen > KEY_MAX_LEN) {
+    1000265c:	07c36463          	bltu	t1,t3,100026c4 <HAL_GetArgs+0x9a>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:52
+        if (*tx_arg_vlen < 0 || *tx_arg_vlen > VALUE_MAX_LEN) {
+    10002660:	00cfae03          	lw	t3,12(t6)
+    10002664:	00cfae03          	lw	t3,12(t6)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:50
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + sizeof(uint32_t));    // klen_len
+    10002668:	00cf8293          	addi	t0,t6,12
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:52
+        if (*tx_arg_vlen < 0 || *tx_arg_vlen > VALUE_MAX_LEN) {
+    1000266c:	05c36c63          	bltu	t1,t3,100026c4 <HAL_GetArgs+0x9a>
+    10002670:	377d                	addiw	a4,a4,-1
+    10002672:	1702                	slli	a4,a4,0x20
+    10002674:	40c00e13          	li	t3,1036
+    10002678:	9301                	srli	a4,a4,0x20
+    1000267a:	03c70733          	mul	a4,a4,t3
+    1000267e:	1802                	slli	a6,a6,0x20
+    10002680:	410f8e13          	addi	t3,t6,1040
+    10002684:	02085813          	srli	a6,a6,0x20
+    10002688:	00180393          	addi	t2,a6,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:46
+        if (*tx_arg_klen < 0 || *tx_arg_klen > KEY_MAX_LEN) {
+    1000268c:	20000e93          	li	t4,512
+    10002690:	9e3a                	add	t3,t3,a4
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:61
+        if (klen == *tx_arg_klen) {
+    10002692:	0008a703          	lw	a4,0(a7)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:60
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + VALUE_MAX_LEN);
+    10002696:	40c78813          	addi	a6,a5,1036
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:61
+        if (klen == *tx_arg_klen) {
+    1000269a:	04e58163          	beq	a1,a4,100026dc <HAL_GetArgs+0xb2>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:42 (discriminator 2)
+    for (int i = 0; i < mtd_param_count; i++) {
+    1000269e:	09c80d63          	beq	a6,t3,10002738 <HAL_GetArgs+0x10e>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:46
+        if (*tx_arg_klen < 0 || *tx_arg_klen > KEY_MAX_LEN) {
+    100026a2:	4107a703          	lw	a4,1040(a5)
+    100026a6:	4107a703          	lw	a4,1040(a5)
+    100026aa:	41078893          	addi	a7,a5,1040
+    100026ae:	00eeeb63          	bltu	t4,a4,100026c4 <HAL_GetArgs+0x9a>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:52
+        if (*tx_arg_vlen < 0 || *tx_arg_vlen > VALUE_MAX_LEN) {
+    100026b2:	4147a703          	lw	a4,1044(a5)
+    100026b6:	4147a703          	lw	a4,1044(a5)
+    100026ba:	41478293          	addi	t0,a5,1044
+    100026be:	87c2                	mv	a5,a6
+    100026c0:	fceef9e3          	bleu	a4,t4,10002692 <HAL_GetArgs+0x68>
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    100026c4:	000417b7          	lui	a5,0x41
+    100026c8:	9fbe                	add	t6,t6,a5
+    100026ca:	6785                	lui	a5,0x1
+    100026cc:	bb97879b          	addiw	a5,a5,-1095
+HAL_GetArgs():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:54
+            return PARAM_LEN_ERROR;
+    100026d0:	6505                	lui	a0,0x1
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    100026d2:	c0ffa823          	sw	a5,-1008(t6)
+HAL_GetArgs():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:54
+            return PARAM_LEN_ERROR;
+    100026d6:	bb950513          	addi	a0,a0,-1095 # bb9 <_start-0x10001447>
+    100026da:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:65
+                if (flag) {
+    100026dc:	00c7c303          	lbu	t1,12(a5) # 100c <_start-0x10000ff4>
+    100026e0:	00054883          	lbu	a7,0(a0)
+    100026e4:	00c78713          	addi	a4,a5,12
+    100026e8:	fb131be3          	bne	t1,a7,1000269e <HAL_GetArgs+0x74>
+    100026ec:	00750f33          	add	t5,a0,t2
+    100026f0:	a039                	j	100026fe <HAL_GetArgs+0xd4>
+    100026f2:	00074303          	lbu	t1,0(a4)
+    100026f6:	00054883          	lbu	a7,0(a0)
+    100026fa:	fb1312e3          	bne	t1,a7,1000269e <HAL_GetArgs+0x74>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:69 (discriminator 2)
+                k++;
+    100026fe:	0505                	addi	a0,a0,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:68 (discriminator 2)
+                tx_arg_key++;
+    10002700:	0705                	addi	a4,a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:63 (discriminator 2)
+            for (int j = 0; j < klen; j++) {
+    10002702:	feaf18e3          	bne	t5,a0,100026f2 <HAL_GetArgs+0xc8>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:72
+                *vlen = *tx_arg_vlen;
+    10002706:	0002a703          	lw	a4,0(t0)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:58
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + KEY_MAX_LEN);
+    1000270a:	20c78793          	addi	a5,a5,524
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:73
+                for (int j = 0; j < *tx_arg_vlen; j++) {
+    1000270e:	4581                	li	a1,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:72
+                *vlen = *tx_arg_vlen;
+    10002710:	c298                	sw	a4,0(a3)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:73
+                for (int j = 0; j < *tx_arg_vlen; j++) {
+    10002712:	0002a703          	lw	a4,0(t0)
+    10002716:	2701                	sext.w	a4,a4
+    10002718:	cf01                	beqz	a4,10002730 <HAL_GetArgs+0x106>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:74 (discriminator 3)
+                    *v = *tx_arg_value;
+    1000271a:	0007c703          	lbu	a4,0(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:75 (discriminator 3)
+                    v++;
+    1000271e:	0605                	addi	a2,a2,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:73 (discriminator 3)
+                for (int j = 0; j < *tx_arg_vlen; j++) {
+    10002720:	2585                	addiw	a1,a1,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:74 (discriminator 3)
+                    *v = *tx_arg_value;
+    10002722:	fee60fa3          	sb	a4,-1(a2)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:73 (discriminator 3)
+                for (int j = 0; j < *tx_arg_vlen; j++) {
+    10002726:	0002a703          	lw	a4,0(t0)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:76 (discriminator 3)
+                    tx_arg_value++;
+    1000272a:	0785                	addi	a5,a5,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:73 (discriminator 3)
+                for (int j = 0; j < *tx_arg_vlen; j++) {
+    1000272c:	fee5e7e3          	bltu	a1,a4,1000271a <HAL_GetArgs+0xf0>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:78
+                v -= *tx_arg_vlen;
+    10002730:	0002a783          	lw	a5,0(t0)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:88
+    return 0;
+    10002734:	4501                	li	a0,0
+    10002736:	8082                	ret
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    10002738:	000417b7          	lui	a5,0x41
+    1000273c:	9fbe                	add	t6,t6,a5
+    1000273e:	6785                	lui	a5,0x1
+    10002740:	bba7879b          	addiw	a5,a5,-1094
+HAL_GetArgs():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:86
+        return PARAM_NOT_FOUND_ERROR;
+    10002744:	6505                	lui	a0,0x1
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    10002746:	c0ffa823          	sw	a5,-1008(t6)
+HAL_GetArgs():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:86
+        return PARAM_NOT_FOUND_ERROR;
+    1000274a:	bba50513          	addi	a0,a0,-1094 # bba <_start-0x10001446>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:89
+}
+    1000274e:	8082                	ret
+
+0000000010002750 <HAL_GetStateAt>:
+HAL_GetStateAt():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:94
+    if (klen <= 0 || klen > KEY_MAX_LEN || index < 0 ) {
+    10002750:	fff5881b          	addiw	a6,a1,-1
+    10002754:	1ff00793          	li	a5,511
+    10002758:	0107e463          	bltu	a5,a6,10002760 <HAL_GetStateAt+0x10>
+    1000275c:	cd5ff06f          	j	10002430 <HAL_GetStateAt.part.0>
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    10002760:	100107b7          	lui	a5,0x10010
+    10002764:	0007b703          	ld	a4,0(a5) # 10010000 <ADDR_HEADER>
+    10002768:	000417b7          	lui	a5,0x41
+HAL_GetStateAt():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:96
+        return PARAM_LEN_ERROR;
+    1000276c:	6505                	lui	a0,0x1
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    1000276e:	97ba                	add	a5,a5,a4
+    10002770:	6705                	lui	a4,0x1
+    10002772:	bb97071b          	addiw	a4,a4,-1095
+    10002776:	c0e7a823          	sw	a4,-1008(a5) # 40c10 <_start-0xffc13f0>
+HAL_GetStateAt():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:170
+}
+    1000277a:	bb950513          	addi	a0,a0,-1095 # bb9 <_start-0x10001447>
+    1000277e:	8082                	ret
+
+0000000010002780 <HAL_GetState>:
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:94
+    if (klen <= 0 || klen > KEY_MAX_LEN || index < 0 ) {
+    10002780:	fff5871b          	addiw	a4,a1,-1
+    10002784:	1ff00793          	li	a5,511
+    10002788:	00e7e563          	bltu	a5,a4,10002792 <HAL_GetState+0x12>
+    1000278c:	4701                	li	a4,0
+    1000278e:	ca3ff06f          	j	10002430 <HAL_GetStateAt.part.0>
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    10002792:	100107b7          	lui	a5,0x10010
+    10002796:	0007b703          	ld	a4,0(a5) # 10010000 <ADDR_HEADER>
+    1000279a:	000417b7          	lui	a5,0x41
+HAL_GetStateAt():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:96
+        return PARAM_LEN_ERROR;
+    1000279e:	6505                	lui	a0,0x1
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    100027a0:	97ba                	add	a5,a5,a4
+    100027a2:	6705                	lui	a4,0x1
+    100027a4:	bb97071b          	addiw	a4,a4,-1095
+    100027a8:	c0e7a823          	sw	a4,-1008(a5) # 40c10 <_start-0xffc13f0>
+HAL_GetState():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:175
+}
+    100027ac:	bb950513          	addi	a0,a0,-1095 # bb9 <_start-0x10001447>
+    100027b0:	8082                	ret
+
+00000000100027b2 <HAL_PutState>:
+HAL_PutState():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:179
+{
+    100027b2:	1101                	addi	sp,sp,-32
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:180
+    if (klen <= 0 || klen > KEY_MAX_LEN || vlen <= 0 || vlen > VALUE_MAX_LEN) {
+    100027b4:	fff5839b          	addiw	t2,a1,-1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:179
+{
+    100027b8:	ec22                	sd	s0,24(sp)
+    100027ba:	10010737          	lui	a4,0x10010
+    100027be:	e826                	sd	s1,16(sp)
+    100027c0:	e44a                	sd	s2,8(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:180
+    if (klen <= 0 || klen > KEY_MAX_LEN || vlen <= 0 || vlen > VALUE_MAX_LEN) {
+    100027c2:	0003889b          	sext.w	a7,t2
+    100027c6:	1ff00793          	li	a5,511
+    100027ca:	00073403          	ld	s0,0(a4) # 10010000 <ADDR_HEADER>
+    100027ce:	1117e363          	bltu	a5,a7,100028d4 <HAL_PutState+0x122>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:180 (discriminator 1)
+    100027d2:	fff68e9b          	addiw	t4,a3,-1
+    100027d6:	000e871b          	sext.w	a4,t4
+    100027da:	0ee7ed63          	bltu	a5,a4,100028d4 <HAL_PutState+0x122>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:185
+    addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t) *3 + KEY_MAX_LEN + VALUE_MAX_LEN) * mtd_param_count);
+    100027de:	100107b7          	lui	a5,0x10010
+    100027e2:	0087a303          	lw	t1,8(a5) # 10010008 <mtd_param_count>
+    100027e6:	40c00f13          	li	t5,1036
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:184
+    volatile uint32_t *addr_offset = (uint32_t *) (ADDR_HEADER + sizeof(uint32_t));
+    100027ea:	00440793          	addi	a5,s0,4
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:185
+    addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t) *3 + KEY_MAX_LEN + VALUE_MAX_LEN) * mtd_param_count);
+    100027ee:	02031713          	slli	a4,t1,0x20
+    100027f2:	9301                	srli	a4,a4,0x20
+    100027f4:	03e70733          	mul	a4,a4,t5
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:193
+    for (int i = mtd_param_count; i < DATA_COUNT; i++) {
+    100027f8:	0ff00e13          	li	t3,255
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:185
+    addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t) *3 + KEY_MAX_LEN + VALUE_MAX_LEN) * mtd_param_count);
+    100027fc:	97ba                	add	a5,a5,a4
+    100027fe:	883e                	mv	a6,a5
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:193
+    for (int i = mtd_param_count; i < DATA_COUNT; i++) {
+    10002800:	146e4a63          	blt	t3,t1,10002954 <HAL_PutState+0x1a2>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:197
+        if (*tx_arg_klen < 0 || *tx_arg_klen > KEY_MAX_LEN) {
+    10002804:	43d8                	lw	a4,4(a5)
+    10002806:	0047ae03          	lw	t3,4(a5)
+    1000280a:	20000f93          	li	t6,512
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:195
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + sizeof(uint32_t));    // flag_len
+    1000280e:	00478713          	addi	a4,a5,4
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:197
+        if (*tx_arg_klen < 0 || *tx_arg_klen > KEY_MAX_LEN) {
+    10002812:	0dcfe163          	bltu	t6,t3,100028d4 <HAL_PutState+0x122>
+    10002816:	0ff00e13          	li	t3,255
+    1000281a:	406e0e3b          	subw	t3,t3,t1
+    1000281e:	1e02                	slli	t3,t3,0x20
+    10002820:	020e5e13          	srli	t3,t3,0x20
+    10002824:	03ee0e33          	mul	t3,t3,t5
+    10002828:	1882                	slli	a7,a7,0x20
+    1000282a:	0208d893          	srli	a7,a7,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:192
+    volatile uint32_t *empty_offset = (uint32_t *) -1;
+    1000282e:	5f7d                	li	t5,-1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:201
+        if (empty_offset == (uint32_t *)-1 && *tx_arg_klen == 0) {
+    10002830:	597d                	li	s2,-1
+    10002832:	00188493          	addi	s1,a7,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:197
+        if (*tx_arg_klen < 0 || *tx_arg_klen > KEY_MAX_LEN) {
+    10002836:	20000293          	li	t0,512
+    1000283a:	9e3e                	add	t3,t3,a5
+    1000283c:	40ce0e13          	addi	t3,t3,1036
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:201
+        if (empty_offset == (uint32_t *)-1 && *tx_arg_klen == 0) {
+    10002840:	032f0463          	beq	t5,s2,10002868 <HAL_PutState+0xb6>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:211
+        if (klen == *tx_arg_klen) {
+    10002844:	4318                	lw	a4,0(a4)
+    10002846:	02e58a63          	beq	a1,a4,1000287a <HAL_PutState+0xc8>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:233 (discriminator 2)
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + VALUE_MAX_LEN);
+    1000284a:	40c78813          	addi	a6,a5,1036
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:193 (discriminator 2)
+    for (int i = mtd_param_count; i < DATA_COUNT; i++) {
+    1000284e:	0bc80363          	beq	a6,t3,100028f4 <HAL_PutState+0x142>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:197
+        if (*tx_arg_klen < 0 || *tx_arg_klen > KEY_MAX_LEN) {
+    10002852:	4107a703          	lw	a4,1040(a5)
+    10002856:	4107a883          	lw	a7,1040(a5)
+    1000285a:	41078713          	addi	a4,a5,1040
+    1000285e:	0712eb63          	bltu	t0,a7,100028d4 <HAL_PutState+0x122>
+    10002862:	87c2                	mv	a5,a6
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:201
+        if (empty_offset == (uint32_t *)-1 && *tx_arg_klen == 0) {
+    10002864:	ff2f10e3          	bne	t5,s2,10002844 <HAL_PutState+0x92>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:201 (discriminator 1)
+    10002868:	00072883          	lw	a7,0(a4)
+    1000286c:	2881                	sext.w	a7,a7
+    1000286e:	fc089be3          	bnez	a7,10002844 <HAL_PutState+0x92>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:211
+        if (klen == *tx_arg_klen) {
+    10002872:	4318                	lw	a4,0(a4)
+    10002874:	8f42                	mv	t5,a6
+    10002876:	fce59ae3          	bne	a1,a4,1000284a <HAL_PutState+0x98>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:215
+                if (flag) {
+    1000287a:	00054303          	lbu	t1,0(a0)
+    1000287e:	00c7c883          	lbu	a7,12(a5)
+    10002882:	00c78713          	addi	a4,a5,12
+    10002886:	fd1312e3          	bne	t1,a7,1000284a <HAL_PutState+0x98>
+    1000288a:	00950fb3          	add	t6,a0,s1
+    1000288e:	a039                	j	1000289c <HAL_PutState+0xea>
+    10002890:	00074303          	lbu	t1,0(a4)
+    10002894:	00054883          	lbu	a7,0(a0)
+    10002898:	fb1319e3          	bne	t1,a7,1000284a <HAL_PutState+0x98>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:219 (discriminator 2)
+                k++;
+    1000289c:	0505                	addi	a0,a0,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:218 (discriminator 2)
+                tx_arg_key++;
+    1000289e:	0705                	addi	a4,a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:213 (discriminator 2)
+            for (int j = 0; j < klen; j++) {
+    100028a0:	feaf98e3          	bne	t6,a0,10002890 <HAL_PutState+0xde>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:222
+                *(uint32_t *)((uint64_t)addr_offset - KEY_MAX_LEN - sizeof(uint32_t)*3) = WRITE_FLAG | *tx_arg_flag;
+    100028a4:	00082703          	lw	a4,0(a6)
+    100028a8:	1e82                	slli	t4,t4,0x20
+    100028aa:	020ede93          	srli	t4,t4,0x20
+    100028ae:	01076713          	ori	a4,a4,16
+    100028b2:	00e82023          	sw	a4,0(a6)
+    100028b6:	0e85                	addi	t4,t4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:209
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + KEY_MAX_LEN);
+    100028b8:	20c78713          	addi	a4,a5,524
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:223
+                *(uint32_t *)((uint64_t)addr_offset - KEY_MAX_LEN - sizeof(uint32_t)) = vlen;
+    100028bc:	c794                	sw	a3,8(a5)
+    100028be:	9eb2                	add	t4,t4,a2
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:225 (discriminator 3)
+                    *(char *)addr_offset = *v;
+    100028c0:	00064783          	lbu	a5,0(a2)
+    100028c4:	0705                	addi	a4,a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:227 (discriminator 3)
+                    v++;
+    100028c6:	0605                	addi	a2,a2,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:225 (discriminator 3)
+                    *(char *)addr_offset = *v;
+    100028c8:	fef70fa3          	sb	a5,-1(a4)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:224 (discriminator 3)
+                for (int j = 0; j < vlen; j++) {
+    100028cc:	fece9ae3          	bne	t4,a2,100028c0 <HAL_PutState+0x10e>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:260
+    return 0;
+    100028d0:	4501                	li	a0,0
+    100028d2:	a821                	j	100028ea <HAL_PutState+0x138>
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    100028d4:	000417b7          	lui	a5,0x41
+    100028d8:	943e                	add	s0,s0,a5
+    100028da:	6785                	lui	a5,0x1
+    100028dc:	bb97879b          	addiw	a5,a5,-1095
+HAL_PutState():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:199
+            return PARAM_LEN_ERROR;
+    100028e0:	6505                	lui	a0,0x1
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    100028e2:	c0f42823          	sw	a5,-1008(s0)
+HAL_PutState():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:199
+            return PARAM_LEN_ERROR;
+    100028e6:	bb950513          	addi	a0,a0,-1095 # bb9 <_start-0x10001447>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:261
+}
+    100028ea:	6462                	ld	s0,24(sp)
+    100028ec:	64c2                	ld	s1,16(sp)
+    100028ee:	6922                	ld	s2,8(sp)
+    100028f0:	6105                	addi	sp,sp,32
+    100028f2:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:236
+        if (empty_offset == (uint32_t *)-1) {
+    100028f4:	57fd                	li	a5,-1
+    100028f6:	04ff0f63          	beq	t5,a5,10002954 <HAL_PutState+0x1a2>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:241
+        *(uint32_t *)empty_offset = WRITE_FLAG | *tx_arg_flag;
+    100028fa:	000f2703          	lw	a4,0(t5)
+    100028fe:	1382                	slli	t2,t2,0x20
+    10002900:	0203d393          	srli	t2,t2,0x20
+    10002904:	01076713          	ori	a4,a4,16
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:246
+        empty_offset = (uint32_t *)((uint64_t)empty_offset + sizeof(uint32_t));    // vlen_len
+    10002908:	00cf0793          	addi	a5,t5,12
+    1000290c:	0385                	addi	t2,t2,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:241
+        *(uint32_t *)empty_offset = WRITE_FLAG | *tx_arg_flag;
+    1000290e:	00ef2023          	sw	a4,0(t5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:243
+        *(uint32_t *)empty_offset = klen;
+    10002912:	00bf2223          	sw	a1,4(t5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:245
+        *(uint32_t *)empty_offset = vlen;
+    10002916:	00df2423          	sw	a3,8(t5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:246
+        empty_offset = (uint32_t *)((uint64_t)empty_offset + sizeof(uint32_t));    // vlen_len
+    1000291a:	873e                	mv	a4,a5
+    1000291c:	007505b3          	add	a1,a0,t2
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:248 (discriminator 3)
+            *(char *)empty_offset = *k;
+    10002920:	00054683          	lbu	a3,0(a0)
+    10002924:	0705                	addi	a4,a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:250 (discriminator 3)
+            k++;
+    10002926:	0505                	addi	a0,a0,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:248 (discriminator 3)
+            *(char *)empty_offset = *k;
+    10002928:	fed70fa3          	sb	a3,-1(a4)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:247 (discriminator 3)
+        for (int i = 0; i < klen; i++) {
+    1000292c:	feb51ae3          	bne	a0,a1,10002920 <HAL_PutState+0x16e>
+    10002930:	020e9693          	slli	a3,t4,0x20
+    10002934:	9281                	srli	a3,a3,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:252
+        empty_offset = (uint32_t *)((uint64_t)empty_offset + KEY_MAX_LEN);
+    10002936:	979e                	add	a5,a5,t2
+    10002938:	0685                	addi	a3,a3,1
+    1000293a:	20078793          	addi	a5,a5,512 # 1200 <_start-0x10000e00>
+    1000293e:	96b2                	add	a3,a3,a2
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:254 (discriminator 3)
+            *(char *)empty_offset = *v;
+    10002940:	00064703          	lbu	a4,0(a2)
+    10002944:	0785                	addi	a5,a5,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:256 (discriminator 3)
+            v++;
+    10002946:	0605                	addi	a2,a2,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:254 (discriminator 3)
+            *(char *)empty_offset = *v;
+    10002948:	fee78fa3          	sb	a4,-1(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:253 (discriminator 3)
+        for (int i = 0; i < vlen; i++) {
+    1000294c:	fed61ae3          	bne	a2,a3,10002940 <HAL_PutState+0x18e>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:260
+    return 0;
+    10002950:	4501                	li	a0,0
+    10002952:	bf61                	j	100028ea <HAL_PutState+0x138>
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    10002954:	000417b7          	lui	a5,0x41
+    10002958:	943e                	add	s0,s0,a5
+    1000295a:	3e900793          	li	a5,1001
+    1000295e:	c0f42823          	sw	a5,-1008(s0)
+HAL_PutState():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:238
+            return OOM_ERROR;
+    10002962:	3e900513          	li	a0,1001
+    10002966:	b751                	j	100028ea <HAL_PutState+0x138>
+
+0000000010002968 <HAL_SetErrCode>:
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    10002968:	100107b7          	lui	a5,0x10010
+    1000296c:	0007b703          	ld	a4,0(a5) # 10010000 <ADDR_HEADER>
+    10002970:	000417b7          	lui	a5,0x41
+    10002974:	97ba                	add	a5,a5,a4
+    10002976:	c0a7a823          	sw	a0,-1008(a5) # 40c10 <_start-0xffc13f0>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:271
+    return 0;
+}
+    1000297a:	4501                	li	a0,0
+    1000297c:	8082                	ret
+
+000000001000297e <HAL_SetStatusCode>:
+HAL_SetStatusCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:278
+
+uint32_t HAL_SetStatusCode(uint32_t status) {
+    uint32_t *addr_offset = (uint32_t *) (ADDR_HEADER + sizeof(uint32_t));
+    addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t) *3 + KEY_MAX_LEN + VALUE_MAX_LEN) * DATA_COUNT
+                               + sizeof(uint64_t) + sizeof(uint32_t) + sizeof(uint32_t));
+    *(uint32_t *)addr_offset = status;
+    1000297e:	100107b7          	lui	a5,0x10010
+    10002982:	0007b703          	ld	a4,0(a5) # 10010000 <ADDR_HEADER>
+    10002986:	000417b7          	lui	a5,0x41
+    1000298a:	97ba                	add	a5,a5,a4
+    1000298c:	c0a7aa23          	sw	a0,-1004(a5) # 40c14 <_start-0xffc13ec>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:280
+    return 0;
+}
+    10002990:	4501                	li	a0,0
+    10002992:	8082                	ret
+
+0000000010002994 <HAL_SetExecCount>:
+HAL_SetExecCount():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:284
+
+
+uint32_t HAL_SetExecCount() {
+    uint32_t *addr_offset = (uint32_t *) (ADDR_HEADER + sizeof(uint32_t));
+    10002994:	100107b7          	lui	a5,0x10010
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:286
+    addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t) *3 + KEY_MAX_LEN + VALUE_MAX_LEN) * DATA_COUNT
+                               + sizeof(uint64_t));
+    10002998:	0007b783          	ld	a5,0(a5) # 10010000 <ADDR_HEADER>
+    1000299c:	00041737          	lui	a4,0x41
+    100029a0:	c0c70713          	addi	a4,a4,-1012 # 40c0c <_start-0xffc13f4>
+    100029a4:	97ba                	add	a5,a5,a4
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:287
+    (*(uint32_t *)addr_offset)++;
+    100029a6:	4398                	lw	a4,0(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:289
+    return 0;
+}
+    100029a8:	4501                	li	a0,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:287
+    (*(uint32_t *)addr_offset)++;
+    100029aa:	2705                	addiw	a4,a4,1
+    100029ac:	c398                	sw	a4,0(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:289
+}
+    100029ae:	8082                	ret
+
+00000000100029b0 <HAL_SetResultInfo>:
+HAL_SetResultInfo():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:292
+
+
+uint32_t HAL_SetResultInfo(char *info, uint32_t len) {
+    100029b0:	100107b7          	lui	a5,0x10010
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:293
+    if (len > EXEC_RESULT_MAX_LEN - sizeof(uint32_t)) {
+    100029b4:	3fc00713          	li	a4,1020
+    100029b8:	0007b783          	ld	a5,0(a5) # 10010000 <ADDR_HEADER>
+    100029bc:	02b76c63          	bltu	a4,a1,100029f4 <HAL_SetResultInfo+0x44>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:300
+        return PARAM_LEN_ERROR;
+    }
+    uint32_t *addr_offset = (uint32_t *) (ADDR_HEADER + sizeof(uint32_t));
+    addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t) *3 + KEY_MAX_LEN + VALUE_MAX_LEN) * DATA_COUNT
+                   + sizeof(uint64_t) + sizeof(uint32_t)*3);
+    *(uint32_t *)addr_offset = len;
+    100029c0:	00041737          	lui	a4,0x41
+    100029c4:	00f706b3          	add	a3,a4,a5
+    100029c8:	c0b6ac23          	sw	a1,-1000(a3)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:301
+    addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t)));
+    100029cc:	c1c70713          	addi	a4,a4,-996 # 40c1c <_start-0xffc13e4>
+    100029d0:	97ba                	add	a5,a5,a4
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:302
+    for (int i = 0; i < len; i++) {
+    100029d2:	cd99                	beqz	a1,100029f0 <HAL_SetResultInfo+0x40>
+    100029d4:	fff5871b          	addiw	a4,a1,-1
+    100029d8:	1702                	slli	a4,a4,0x20
+    100029da:	9301                	srli	a4,a4,0x20
+    100029dc:	0705                	addi	a4,a4,1
+    100029de:	972a                	add	a4,a4,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:303 (discriminator 3)
+        *(char *)addr_offset = *info;
+    100029e0:	00054683          	lbu	a3,0(a0)
+    100029e4:	0785                	addi	a5,a5,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:305 (discriminator 3)
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + 1);
+        info++;
+    100029e6:	0505                	addi	a0,a0,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:303 (discriminator 3)
+        *(char *)addr_offset = *info;
+    100029e8:	fed78fa3          	sb	a3,-1(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:302 (discriminator 3)
+    for (int i = 0; i < len; i++) {
+    100029ec:	fea71ae3          	bne	a4,a0,100029e0 <HAL_SetResultInfo+0x30>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:307
+    }
+    return 0;
+    100029f0:	4501                	li	a0,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:308
+}
+    100029f2:	8082                	ret
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    100029f4:	00041737          	lui	a4,0x41
+    100029f8:	97ba                	add	a5,a5,a4
+    100029fa:	6705                	lui	a4,0x1
+    100029fc:	bb97071b          	addiw	a4,a4,-1095
+HAL_SetResultInfo():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:295
+        return PARAM_LEN_ERROR;
+    10002a00:	6505                	lui	a0,0x1
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    10002a02:	c0e7a823          	sw	a4,-1008(a5)
+HAL_SetResultInfo():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:295
+        return PARAM_LEN_ERROR;
+    10002a06:	bb950513          	addi	a0,a0,-1095 # bb9 <_start-0x10001447>
+    10002a0a:	8082                	ret
+
+0000000010002a0c <HAL_SetLogInfo>:
+HAL_SetLogInfo():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:312
+
+
+uint32_t HAL_SetLogInfo(char *info, uint32_t len) {
+    if (len <= 0 || len > EXEC_LOG_MAX_LEN ) {
+    10002a0c:	35fd                	addiw	a1,a1,-1
+    10002a0e:	100107b7          	lui	a5,0x10010
+    10002a12:	0005869b          	sext.w	a3,a1
+    10002a16:	0c700713          	li	a4,199
+    10002a1a:	0007b783          	ld	a5,0(a5) # 10010000 <ADDR_HEADER>
+    10002a1e:	02d76563          	bltu	a4,a3,10002a48 <HAL_SetLogInfo+0x3c>
+    10002a22:	02059713          	slli	a4,a1,0x20
+    10002a26:	9301                	srli	a4,a4,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:318
+        HAL_SetErrCode(PARAM_LEN_ERROR);
+        return PARAM_LEN_ERROR;
+    }
+    uint32_t *addr_offset = (uint32_t *) (ADDR_HEADER + sizeof(uint32_t));
+    addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t) * 3 + KEY_MAX_LEN + VALUE_MAX_LEN) * DATA_COUNT + sizeof(uint64_t)
+                               + sizeof(uint32_t) * 3 + EXEC_RESULT_MAX_LEN);
+    10002a28:	000416b7          	lui	a3,0x41
+    10002a2c:	0705                	addi	a4,a4,1
+    10002a2e:	06e1                	addi	a3,a3,24
+    10002a30:	97b6                	add	a5,a5,a3
+    10002a32:	972a                	add	a4,a4,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:320 (discriminator 3)
+    for (int i = 0; i < len; i++) {
+        *(char *)addr_offset = *info;
+    10002a34:	00054683          	lbu	a3,0(a0)
+    10002a38:	0785                	addi	a5,a5,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:322 (discriminator 3)
+        addr_offset = (uint32_t *)((uint64_t)addr_offset + 1);
+        info++;
+    10002a3a:	0505                	addi	a0,a0,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:320 (discriminator 3)
+        *(char *)addr_offset = *info;
+    10002a3c:	fed78fa3          	sb	a3,-1(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:319 (discriminator 3)
+    for (int i = 0; i < len; i++) {
+    10002a40:	fea71ae3          	bne	a4,a0,10002a34 <HAL_SetLogInfo+0x28>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:324
+    }
+    return 0;
+    10002a44:	4501                	li	a0,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:325
+    10002a46:	8082                	ret
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    10002a48:	00041737          	lui	a4,0x41
+    10002a4c:	97ba                	add	a5,a5,a4
+    10002a4e:	6705                	lui	a4,0x1
+    10002a50:	bb97071b          	addiw	a4,a4,-1095
+HAL_SetLogInfo():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:314
+        return PARAM_LEN_ERROR;
+    10002a54:	6505                	lui	a0,0x1
+HAL_SetErrCode():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:269
+    *(uint32_t *)addr_offset = err;
+    10002a56:	c0e7a823          	sw	a4,-1008(a5)
+HAL_SetLogInfo():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/hal.c:314
+        return PARAM_LEN_ERROR;
+    10002a5a:	bb950513          	addi	a0,a0,-1095 # bb9 <_start-0x10001447>
+    10002a5e:	8082                	ret
+
+0000000010002a60 <f0>:
+f0():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:180
+    }
+    return totle_asset_val <= MONEY_UNIT_Y ? 41 : 42;
+}
+
+void f0(void)
+{
+    10002a60:	b8010113          	addi	sp,sp,-1152
+    10002a64:	46813823          	sd	s0,1136(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:187
+    int vlen;
+    char count_result[300];
+    int stlen;
+    char count_sql[512];
+    uint32_t * addr_debug = (uint32_t *)0x140000000;
+    *addr_debug = 0x55aa55aa;
+    10002a68:	55aa57b7          	lui	a5,0x55aa5
+    10002a6c:	4415                	li	s0,5
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:180
+{
+    10002a6e:	46113c23          	sd	ra,1144(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:187
+    *addr_debug = 0x55aa55aa;
+    10002a72:	5aa7879b          	addiw	a5,a5,1450
+    10002a76:	047a                	slli	s0,s0,0x1e
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:188
+    uint32_t ret = HAL_GetArgs("qlrzjh", 6, qlrzjh, &vlen);
+    10002a78:	10002537          	lui	a0,0x10002
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:187
+    *addr_debug = 0x55aa55aa;
+    10002a7c:	c01c                	sw	a5,0(s0)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:188
+    uint32_t ret = HAL_GetArgs("qlrzjh", 6, qlrzjh, &vlen);
+    10002a7e:	0034                	addi	a3,sp,8
+    10002a80:	0810                	addi	a2,sp,16
+    10002a82:	4599                	li	a1,6
+    10002a84:	26850513          	addi	a0,a0,616 # 10002268 <flist+0x40>
+    10002a88:	ba3ff0ef          	jal	ra,1000262a <HAL_GetArgs>
+    10002a8c:	2501                	sext.w	a0,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:189
+    if (ret != 0) {
+    10002a8e:	0e051a63          	bnez	a0,10002b82 <f0+0x122>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:194
+        HAL_SetStatusCode(STATUS_CODE_FAILURE);
+        HAL_SetResultInfo("get arg fail", 12);
+        return;
+    }
+    *(addr_debug + 1) = 0x66bb66bb;
+    10002a92:	66bb67b7          	lui	a5,0x66bb6
+    10002a96:	6bb7879b          	addiw	a5,a5,1723
+    10002a9a:	c05c                	sw	a5,4(s0)
+    10002a9c:	10002637          	lui	a2,0x10002
+    10002aa0:	100027b7          	lui	a5,0x10002
+    10002aa4:	25978793          	addi	a5,a5,601 # 10002259 <flist+0x31>
+    10002aa8:	26760613          	addi	a2,a2,615 # 10002267 <flist+0x3f>
+    10002aac:	1c98                	addi	a4,sp,624
+    10002aae:	06500693          	li	a3,101
+    10002ab2:	a021                	j	10002aba <f0+0x5a>
+    10002ab4:	0007c683          	lbu	a3,0(a5)
+    10002ab8:	0785                	addi	a5,a5,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:197 (discriminator 3)
+    for(int i = 0; i < 15; i++)
+    {
+        count_sql[i] = "estate::qlrzjh="[i];
+    10002aba:	00d70023          	sb	a3,0(a4) # 1000 <_start-0x10001000>
+    10002abe:	0705                	addi	a4,a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:195 (discriminator 3)
+    for(int i = 0; i < 15; i++)
+    10002ac0:	fec79ae3          	bne	a5,a2,10002ab4 <f0+0x54>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:199
+    }
+    for (int i = 15; i < 15 + vlen; i++) {
+    10002ac4:	45a2                	lw	a1,8(sp)
+    10002ac6:	02b05463          	blez	a1,10002aee <f0+0x8e>
+    10002aca:	fff5861b          	addiw	a2,a1,-1
+    10002ace:	02061693          	slli	a3,a2,0x20
+    10002ad2:	9281                	srli	a3,a3,0x20
+    10002ad4:	0510                	addi	a2,sp,640
+    10002ad6:	0818                	addi	a4,sp,16
+    10002ad8:	27f10793          	addi	a5,sp,639
+    10002adc:	9636                	add	a2,a2,a3
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:200 (discriminator 3)
+        count_sql[i] = qlrzjh[i - 15];
+    10002ade:	00074683          	lbu	a3,0(a4)
+    10002ae2:	0785                	addi	a5,a5,1
+    10002ae4:	0705                	addi	a4,a4,1
+    10002ae6:	fed78fa3          	sb	a3,-1(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:199 (discriminator 3)
+    for (int i = 15; i < 15 + vlen; i++) {
+    10002aea:	fec79ae3          	bne	a5,a2,10002ade <f0+0x7e>
+    10002aee:	1c9c                	addi	a5,sp,624
+    10002af0:	00f5871b          	addiw	a4,a1,15
+    10002af4:	973e                	add	a4,a4,a5
+    10002af6:	10002637          	lui	a2,0x10002
+    10002afa:	100027b7          	lui	a5,0x10002
+    10002afe:	24978793          	addi	a5,a5,585 # 10002249 <flist+0x21>
+    10002b02:	25360613          	addi	a2,a2,595 # 10002253 <flist+0x2b>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:202
+    }
+    for (int i = 15 + vlen; i < 15 + vlen + 11; i++) {
+    10002b06:	03a00693          	li	a3,58
+    10002b0a:	a021                	j	10002b12 <f0+0xb2>
+    10002b0c:	0007c683          	lbu	a3,0(a5)
+    10002b10:	0785                	addi	a5,a5,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:203 (discriminator 3)
+        count_sql[i] = ":$:count(*)"[i - 15 - vlen];
+    10002b12:	00d70023          	sb	a3,0(a4)
+    10002b16:	0705                	addi	a4,a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:202 (discriminator 3)
+    for (int i = 15 + vlen; i < 15 + vlen + 11; i++) {
+    10002b18:	fec79ae3          	bne	a5,a2,10002b0c <f0+0xac>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:205
+    }
+    ret = HAL_GetState(count_sql, 15 + vlen + 11, count_result, &stlen);
+    10002b1c:	0074                	addi	a3,sp,12
+    10002b1e:	0290                	addi	a2,sp,320
+    10002b20:	25e9                	addiw	a1,a1,26
+    10002b22:	1c88                	addi	a0,sp,624
+    10002b24:	c5dff0ef          	jal	ra,10002780 <HAL_GetState>
+    10002b28:	2501                	sext.w	a0,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:206
+    if (ret != 0) {
+    10002b2a:	c115                	beqz	a0,10002b4e <f0+0xee>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:207
+        HAL_SetStatusCode(STATUS_CODE_FAILURE);
+    10002b2c:	4505                	li	a0,1
+    10002b2e:	e51ff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:208
+        HAL_SetResultInfo("get count_result fail", 21);
+    10002b32:	10002537          	lui	a0,0x10002
+    10002b36:	45d5                	li	a1,21
+    10002b38:	28050513          	addi	a0,a0,640 # 10002280 <flist+0x58>
+    10002b3c:	e75ff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:215
+    }
+    *(addr_debug + 2) = 0x77cc77cc;
+    HAL_SetStatusCode(STATUS_CODE_SUCCESS);
+    HAL_SetResultInfo(count_result, stlen);
+    *(addr_debug + 3) = 0x88dd88dd;
+}
+    10002b40:	47813083          	ld	ra,1144(sp)
+    10002b44:	47013403          	ld	s0,1136(sp)
+    10002b48:	48010113          	addi	sp,sp,1152
+    10002b4c:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:211
+    *(addr_debug + 2) = 0x77cc77cc;
+    10002b4e:	4415                	li	s0,5
+    10002b50:	77cc77b7          	lui	a5,0x77cc7
+    10002b54:	7cc7879b          	addiw	a5,a5,1996
+    10002b58:	047a                	slli	s0,s0,0x1e
+    10002b5a:	c41c                	sw	a5,8(s0)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:212
+    HAL_SetStatusCode(STATUS_CODE_SUCCESS);
+    10002b5c:	4501                	li	a0,0
+    10002b5e:	e21ff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:213
+    HAL_SetResultInfo(count_result, stlen);
+    10002b62:	45b2                	lw	a1,12(sp)
+    10002b64:	0288                	addi	a0,sp,320
+    10002b66:	e4bff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:214
+    *(addr_debug + 3) = 0x88dd88dd;
+    10002b6a:	88dd97b7          	lui	a5,0x88dd9
+    10002b6e:	8dd7879b          	addiw	a5,a5,-1827
+    10002b72:	c45c                	sw	a5,12(s0)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:215
+}
+    10002b74:	47813083          	ld	ra,1144(sp)
+    10002b78:	47013403          	ld	s0,1136(sp)
+    10002b7c:	48010113          	addi	sp,sp,1152
+    10002b80:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:190
+        HAL_SetStatusCode(STATUS_CODE_FAILURE);
+    10002b82:	4505                	li	a0,1
+    10002b84:	dfbff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:191
+        HAL_SetResultInfo("get arg fail", 12);
+    10002b88:	10002537          	lui	a0,0x10002
+    10002b8c:	45b1                	li	a1,12
+    10002b8e:	27050513          	addi	a0,a0,624 # 10002270 <flist+0x48>
+    10002b92:	e1fff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:215
+}
+    10002b96:	47813083          	ld	ra,1144(sp)
+    10002b9a:	47013403          	ld	s0,1136(sp)
+    10002b9e:	48010113          	addi	sp,sp,1152
+    10002ba2:	8082                	ret
+
+0000000010002ba4 <BAEC_strcmp.part.0>:
+BAEC_strcmp():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:102
+        c1 = *s1++;
+    10002ba4:	00054703          	lbu	a4,0(a0)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:103
+        c2 = *s2++;
+    10002ba8:	0005c783          	lbu	a5,0(a1)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:97
+int BAEC_strcmp(const char *s1, const char *s2, uint32_t len)
+    10002bac:	1141                	addi	sp,sp,-16
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:102
+        c1 = *s1++;
+    10002bae:	00e10723          	sb	a4,14(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:103
+        c2 = *s2++;
+    10002bb2:	00f107a3          	sb	a5,15(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:104
+        if (c1 != c2) {
+    10002bb6:	00e14703          	lbu	a4,14(sp)
+    10002bba:	00f14783          	lbu	a5,15(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:107
+        return 0;
+    10002bbe:	4501                	li	a0,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:104
+        if (c1 != c2) {
+    10002bc0:	0ff7f793          	andi	a5,a5,255
+    10002bc4:	00e78a63          	beq	a5,a4,10002bd8 <BAEC_strcmp.part.0+0x34>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:105
+            return (c1 < c2) ? c1 : c2;
+    10002bc8:	00e14783          	lbu	a5,14(sp)
+    10002bcc:	00f14703          	lbu	a4,15(sp)
+    10002bd0:	00e7e663          	bltu	a5,a4,10002bdc <BAEC_strcmp.part.0+0x38>
+    10002bd4:	00f14503          	lbu	a0,15(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:111
+}
+    10002bd8:	0141                	addi	sp,sp,16
+    10002bda:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:105
+            return (c1 < c2) ? c1 : c2;
+    10002bdc:	00e14503          	lbu	a0,14(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:111
+}
+    10002be0:	0141                	addi	sp,sp,16
+    10002be2:	8082                	ret
+
+0000000010002be4 <num2str>:
+num2str():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:20
+    char nums[] = "0123456789";
+    10002be4:	10002737          	lui	a4,0x10002
+    10002be8:	29870793          	addi	a5,a4,664 # 10002298 <flist+0x70>
+    10002bec:	29873683          	ld	a3,664(a4)
+    10002bf0:	0087d703          	lhu	a4,8(a5) # ffffffff88dd9008 <_stack+0xffffffff78dc5008>
+    10002bf4:	00a7c783          	lbu	a5,10(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:19
+{
+    10002bf8:	1141                	addi	sp,sp,-16
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:20
+    char nums[] = "0123456789";
+    10002bfa:	e036                	sd	a3,0(sp)
+    10002bfc:	00f10523          	sb	a5,10(sp)
+    10002c00:	00e11423          	sh	a4,8(sp)
+    10002c04:	87ae                	mv	a5,a1
+    10002c06:	86ae                	mv	a3,a1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:21
+    int i=0, j, k = 0;
+    10002c08:	4801                	li	a6,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:28
+        out[i++] = nums[num % 10];
+    10002c0a:	48a9                	li	a7,10
+    10002c0c:	a011                	j	10002c10 <num2str+0x2c>
+    10002c0e:	881a                	mv	a6,t1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:28 (discriminator 1)
+    10002c10:	03157733          	remu	a4,a0,a7
+    10002c14:	01010e13          	addi	t3,sp,16
+    10002c18:	0685                	addi	a3,a3,1
+    10002c1a:	0018031b          	addiw	t1,a6,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:29 (discriminator 1)
+        num /= 10;
+    10002c1e:	03155533          	divu	a0,a0,a7
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:28 (discriminator 1)
+        out[i++] = nums[num % 10];
+    10002c22:	9772                	add	a4,a4,t3
+    10002c24:	ff074703          	lbu	a4,-16(a4)
+    10002c28:	fee68fa3          	sb	a4,-1(a3) # 40fff <_start-0xffc1001>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:31 (discriminator 1)
+    } while(num);
+    10002c2c:	f16d                	bnez	a0,10002c0e <num2str+0x2a>
+    10002c2e:	00158713          	addi	a4,a1,1
+    10002c32:	4018569b          	sraiw	a3,a6,0x1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:32
+    *out_len = i;
+    10002c36:	00662023          	sw	t1,0(a2)
+    10002c3a:	95c2                	add	a1,a1,a6
+    10002c3c:	00d70633          	add	a2,a4,a3
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:35 (discriminator 3)
+        out[j] = out[i - 1 + k - j];
+    10002c40:	0005c683          	lbu	a3,0(a1)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:34 (discriminator 3)
+        swap_temp = out[j];
+    10002c44:	0007c703          	lbu	a4,0(a5)
+    10002c48:	0785                	addi	a5,a5,1
+    10002c4a:	15fd                	addi	a1,a1,-1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:35 (discriminator 3)
+        out[j] = out[i - 1 + k - j];
+    10002c4c:	fed78fa3          	sb	a3,-1(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:36 (discriminator 3)
+        out[i-1+k-j] = swap_temp;
+    10002c50:	00e580a3          	sb	a4,1(a1)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:33 (discriminator 3)
+    for(j= k; j<= (i-1)/2; j++) {
+    10002c54:	fec796e3          	bne	a5,a2,10002c40 <num2str+0x5c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:38
+}
+    10002c58:	0141                	addi	sp,sp,16
+    10002c5a:	8082                	ret
+
+0000000010002c5c <assemble_sql>:
+assemble_sql():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:42
+{
+    10002c5c:	6302                	ld	t1,0(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:43
+    for (int i = 0; i < table_len; i++) {
+    10002c5e:	c195                	beqz	a1,10002c82 <assemble_sql+0x26>
+    10002c60:	fff58f1b          	addiw	t5,a1,-1
+    10002c64:	1f02                	slli	t5,t5,0x20
+    10002c66:	00150e93          	addi	t4,a0,1
+    10002c6a:	020f5f13          	srli	t5,t5,0x20
+    10002c6e:	8e1a                	mv	t3,t1
+    10002c70:	9f76                	add	t5,t5,t4
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:44 (discriminator 3)
+        sql[i] = table[i];
+    10002c72:	00054e83          	lbu	t4,0(a0)
+    10002c76:	0e05                	addi	t3,t3,1
+    10002c78:	0505                	addi	a0,a0,1
+    10002c7a:	ffde0fa3          	sb	t4,-1(t3)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:43 (discriminator 3)
+    for (int i = 0; i < table_len; i++) {
+    10002c7e:	feaf1ae3          	bne	t5,a0,10002c72 <assemble_sql+0x16>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:46
+    sql[table_len] = ':';
+    10002c82:	02059e13          	slli	t3,a1,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:47
+    sql[table_len + 1] = ':';
+    10002c86:	0015851b          	addiw	a0,a1,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:46
+    sql[table_len] = ':';
+    10002c8a:	020e5e13          	srli	t3,t3,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:47
+    sql[table_len + 1] = ':';
+    10002c8e:	1502                	slli	a0,a0,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:46
+    sql[table_len] = ':';
+    10002c90:	03a00e93          	li	t4,58
+    10002c94:	9e1a                	add	t3,t3,t1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:47
+    sql[table_len + 1] = ':';
+    10002c96:	9101                	srli	a0,a0,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:46
+    sql[table_len] = ':';
+    10002c98:	01de0023          	sb	t4,0(t3)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:47
+    sql[table_len + 1] = ':';
+    10002c9c:	951a                	add	a0,a0,t1
+    10002c9e:	01d50023          	sb	t4,0(a0)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:48
+    for (int i = 0; i < cond_col_len; i++) {
+    10002ca2:	c685                	beqz	a3,10002cca <assemble_sql+0x6e>
+    10002ca4:	00268f1b          	addiw	t5,a3,2
+    10002ca8:	0025851b          	addiw	a0,a1,2
+    10002cac:	00bf0f3b          	addw	t5,t5,a1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:49 (discriminator 3)
+        sql[table_len + 2 + i] = cond_col[i];
+    10002cb0:	00064e83          	lbu	t4,0(a2)
+    10002cb4:	02051e13          	slli	t3,a0,0x20
+    10002cb8:	020e5e13          	srli	t3,t3,0x20
+    10002cbc:	9e1a                	add	t3,t3,t1
+    10002cbe:	01de0023          	sb	t4,0(t3)
+    10002cc2:	2505                	addiw	a0,a0,1
+    10002cc4:	0605                	addi	a2,a2,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:48 (discriminator 3)
+    for (int i = 0; i < cond_col_len; i++) {
+    10002cc6:	ffe515e3          	bne	a0,t5,10002cb0 <assemble_sql+0x54>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:51
+    sql[table_len + 2 + cond_col_len] = '=';
+    10002cca:	9db5                	addw	a1,a1,a3
+    10002ccc:	0025869b          	addiw	a3,a1,2
+    10002cd0:	1682                	slli	a3,a3,0x20
+    10002cd2:	9281                	srli	a3,a3,0x20
+    10002cd4:	969a                	add	a3,a3,t1
+    10002cd6:	03d00613          	li	a2,61
+    10002cda:	00c68023          	sb	a2,0(a3)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:52
+    for (int i = 0; i < cond_val_len; i++) {
+    10002cde:	c39d                	beqz	a5,10002d04 <assemble_sql+0xa8>
+    10002ce0:	00378e1b          	addiw	t3,a5,3
+    10002ce4:	0035861b          	addiw	a2,a1,3
+    10002ce8:	00be0e3b          	addw	t3,t3,a1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:53 (discriminator 3)
+        sql[table_len + 2 + cond_col_len + 1 + i] = cond_val[i];
+    10002cec:	00074683          	lbu	a3,0(a4)
+    10002cf0:	02061513          	slli	a0,a2,0x20
+    10002cf4:	9101                	srli	a0,a0,0x20
+    10002cf6:	951a                	add	a0,a0,t1
+    10002cf8:	00d50023          	sb	a3,0(a0)
+    10002cfc:	2605                	addiw	a2,a2,1
+    10002cfe:	0705                	addi	a4,a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:52 (discriminator 3)
+    for (int i = 0; i < cond_val_len; i++) {
+    10002d00:	fece16e3          	bne	t3,a2,10002cec <assemble_sql+0x90>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:55
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len] = ':';
+    10002d04:	9fad                	addw	a5,a5,a1
+    10002d06:	0037861b          	addiw	a2,a5,3
+    10002d0a:	1602                	slli	a2,a2,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:56
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len + 1] = '$';
+    10002d0c:	0047869b          	addiw	a3,a5,4
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:55
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len] = ':';
+    10002d10:	9201                	srli	a2,a2,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:56
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len + 1] = '$';
+    10002d12:	1682                	slli	a3,a3,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:57
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len + 2] = ':';
+    10002d14:	0057871b          	addiw	a4,a5,5
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:55
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len] = ':';
+    10002d18:	03a00593          	li	a1,58
+    10002d1c:	961a                	add	a2,a2,t1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:56
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len + 1] = '$';
+    10002d1e:	9281                	srli	a3,a3,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:57
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len + 2] = ':';
+    10002d20:	1702                	slli	a4,a4,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:55
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len] = ':';
+    10002d22:	00b60023          	sb	a1,0(a2)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:56
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len + 1] = '$';
+    10002d26:	969a                	add	a3,a3,t1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:57
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len + 2] = ':';
+    10002d28:	9301                	srli	a4,a4,0x20
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:56
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len + 1] = '$';
+    10002d2a:	02400613          	li	a2,36
+    10002d2e:	00c68023          	sb	a2,0(a3)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:57
+    sql[table_len + 2 + cond_col_len + 1 + cond_val_len + 2] = ':';
+    10002d32:	971a                	add	a4,a4,t1
+    10002d34:	00b70023          	sb	a1,0(a4)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:58
+    for (int i = 0; i < sel_col_len; i++) {
+    10002d38:	02088963          	beqz	a7,10002d6a <assemble_sql+0x10e>
+    10002d3c:	2899                	addiw	a7,a7,6
+    10002d3e:	0067871b          	addiw	a4,a5,6
+    10002d42:	00f885bb          	addw	a1,a7,a5
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:59 (discriminator 3)
+        sql[table_len + 2 + cond_col_len + 1 + cond_val_len + 3 + i] = sel_col[i];
+    10002d46:	00084603          	lbu	a2,0(a6)
+    10002d4a:	02071693          	slli	a3,a4,0x20
+    10002d4e:	9281                	srli	a3,a3,0x20
+    10002d50:	969a                	add	a3,a3,t1
+    10002d52:	00c68023          	sb	a2,0(a3)
+    10002d56:	2705                	addiw	a4,a4,1
+    10002d58:	0805                	addi	a6,a6,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:58 (discriminator 3)
+    for (int i = 0; i < sel_col_len; i++) {
+    10002d5a:	fee596e3          	bne	a1,a4,10002d46 <assemble_sql+0xea>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:61
+    *sql_len = table_len + 2 + cond_col_len + 1 + cond_val_len + 3 + sel_col_len;
+    10002d5e:	00f888bb          	addw	a7,a7,a5
+    10002d62:	67a2                	ld	a5,8(sp)
+    10002d64:	0117a023          	sw	a7,0(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:62
+}
+    10002d68:	8082                	ret
+    10002d6a:	4899                	li	a7,6
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:61
+    *sql_len = table_len + 2 + cond_col_len + 1 + cond_val_len + 3 + sel_col_len;
+    10002d6c:	00f888bb          	addw	a7,a7,a5
+    10002d70:	67a2                	ld	a5,8(sp)
+    10002d72:	0117a023          	sw	a7,0(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:62
+}
+    10002d76:	8082                	ret
+
+0000000010002d78 <is_exception>:
+is_exception():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:65
+{
+    10002d78:	da010113          	addi	sp,sp,-608
+    10002d7c:	24813823          	sd	s0,592(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:73
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "isvalid", 7, sql, &sql_len);
+    10002d80:	1060                	addi	s0,sp,44
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:65
+{
+    10002d82:	24913423          	sd	s1,584(sp)
+    10002d86:	25213023          	sd	s2,576(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:73
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "isvalid", 7, sql, &sql_len);
+    10002d8a:	e422                	sd	s0,8(sp)
+    10002d8c:	10002937          	lui	s2,0x10002
+    10002d90:	1800                	addi	s0,sp,48
+    10002d92:	100024b7          	lui	s1,0x10002
+    10002d96:	10002837          	lui	a6,0x10002
+    10002d9a:	87ae                	mv	a5,a1
+    10002d9c:	872a                	mv	a4,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:65
+{
+    10002d9e:	23313c23          	sd	s3,568(sp)
+    10002da2:	23413823          	sd	s4,560(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:73
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "isvalid", 7, sql, &sql_len);
+    10002da6:	489d                	li	a7,7
+    10002da8:	2a880813          	addi	a6,a6,680 # 100022a8 <flist+0x80>
+    10002dac:	4699                	li	a3,6
+    10002dae:	2b090613          	addi	a2,s2,688 # 100022b0 <flist+0x88>
+    10002db2:	e022                	sd	s0,0(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:65
+{
+    10002db4:	89aa                	mv	s3,a0
+    10002db6:	8a2e                	mv	s4,a1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:73
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "isvalid", 7, sql, &sql_len);
+    10002db8:	2b848513          	addi	a0,s1,696 # 100022b8 <flist+0x90>
+    10002dbc:	4599                	li	a1,6
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:65
+{
+    10002dbe:	24113c23          	sd	ra,600(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:73
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "isvalid", 7, sql, &sql_len);
+    10002dc2:	e9bff0ef          	jal	ra,10002c5c <assemble_sql>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:74
+    uint32_t ret = HAL_GetState(sql, sql_len, isvalid, &len);
+    10002dc6:	55b2                	lw	a1,44(sp)
+    10002dc8:	1034                	addi	a3,sp,40
+    10002dca:	0810                	addi	a2,sp,16
+    10002dcc:	1808                	addi	a0,sp,48
+    10002dce:	9b3ff0ef          	jal	ra,10002780 <HAL_GetState>
+    10002dd2:	0005041b          	sext.w	s0,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:75
+    if (ret != 0) {
+    10002dd6:	e479                	bnez	s0,10002ea4 <is_exception+0x12c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:80
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "is_dissent", 10, sql, &sql_len);
+    10002dd8:	1074                	addi	a3,sp,44
+    10002dda:	e436                	sd	a3,8(sp)
+    10002ddc:	10002837          	lui	a6,0x10002
+    10002de0:	1814                	addi	a3,sp,48
+    10002de2:	48a9                	li	a7,10
+    10002de4:	2d880813          	addi	a6,a6,728 # 100022d8 <flist+0xb0>
+    10002de8:	87d2                	mv	a5,s4
+    10002dea:	874e                	mv	a4,s3
+    10002dec:	2b090613          	addi	a2,s2,688
+    10002df0:	4599                	li	a1,6
+    10002df2:	2b848513          	addi	a0,s1,696
+    10002df6:	e036                	sd	a3,0(sp)
+    10002df8:	4699                	li	a3,6
+    10002dfa:	e63ff0ef          	jal	ra,10002c5c <assemble_sql>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:81
+    ret = HAL_GetState(sql, sql_len, is_dissent, &len);
+    10002dfe:	55b2                	lw	a1,44(sp)
+    10002e00:	1034                	addi	a3,sp,40
+    10002e02:	0830                	addi	a2,sp,24
+    10002e04:	1808                	addi	a0,sp,48
+    10002e06:	97bff0ef          	jal	ra,10002780 <HAL_GetState>
+    10002e0a:	0005041b          	sext.w	s0,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:82
+    if (ret != 0) {
+    10002e0e:	e02d                	bnez	s0,10002e70 <is_exception+0xf8>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:87
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "is_restrict", 11, sql, &sql_len);
+    10002e10:	1074                	addi	a3,sp,44
+    10002e12:	e436                	sd	a3,8(sp)
+    10002e14:	10002837          	lui	a6,0x10002
+    10002e18:	1814                	addi	a3,sp,48
+    10002e1a:	48ad                	li	a7,11
+    10002e1c:	30080813          	addi	a6,a6,768 # 10002300 <flist+0xd8>
+    10002e20:	87d2                	mv	a5,s4
+    10002e22:	874e                	mv	a4,s3
+    10002e24:	2b090613          	addi	a2,s2,688
+    10002e28:	4599                	li	a1,6
+    10002e2a:	2b848513          	addi	a0,s1,696
+    10002e2e:	e036                	sd	a3,0(sp)
+    10002e30:	4699                	li	a3,6
+    10002e32:	e2bff0ef          	jal	ra,10002c5c <assemble_sql>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:88
+    ret = HAL_GetState(sql, sql_len, is_restrict, &len);
+    10002e36:	55b2                	lw	a1,44(sp)
+    10002e38:	1034                	addi	a3,sp,40
+    10002e3a:	1010                	addi	a2,sp,32
+    10002e3c:	1808                	addi	a0,sp,48
+    10002e3e:	943ff0ef          	jal	ra,10002780 <HAL_GetState>
+    10002e42:	0005041b          	sext.w	s0,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:89
+    if (ret != 0) {
+    10002e46:	e835                	bnez	s0,10002eba <is_exception+0x142>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:94
+    return isvalid[0] == '0' || is_dissent[0] == '1' || is_restrict[0] == '1';
+    10002e48:	01014703          	lbu	a4,16(sp)
+    10002e4c:	03000793          	li	a5,48
+    10002e50:	4405                	li	s0,1
+    10002e52:	02f70963          	beq	a4,a5,10002e84 <is_exception+0x10c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:94 (discriminator 2)
+    10002e56:	01814703          	lbu	a4,24(sp)
+    10002e5a:	03100793          	li	a5,49
+    10002e5e:	02f70363          	beq	a4,a5,10002e84 <is_exception+0x10c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:94 (discriminator 4)
+    10002e62:	02014403          	lbu	s0,32(sp)
+    10002e66:	fcf40413          	addi	s0,s0,-49
+    10002e6a:	00143413          	seqz	s0,s0
+    10002e6e:	a819                	j	10002e84 <is_exception+0x10c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:83
+        HAL_SetStatusCode(STATUS_CODE_FAILURE);
+    10002e70:	4505                	li	a0,1
+    10002e72:	b0dff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:84
+        HAL_SetResultInfo("get is_dissent fail", 16);
+    10002e76:	10002537          	lui	a0,0x10002
+    10002e7a:	45c1                	li	a1,16
+    10002e7c:	2e850513          	addi	a0,a0,744 # 100022e8 <flist+0xc0>
+    10002e80:	b31ff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:95
+}
+    10002e84:	8522                	mv	a0,s0
+    10002e86:	25813083          	ld	ra,600(sp)
+    10002e8a:	25013403          	ld	s0,592(sp)
+    10002e8e:	24813483          	ld	s1,584(sp)
+    10002e92:	24013903          	ld	s2,576(sp)
+    10002e96:	23813983          	ld	s3,568(sp)
+    10002e9a:	23013a03          	ld	s4,560(sp)
+    10002e9e:	26010113          	addi	sp,sp,608
+    10002ea2:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:76
+        HAL_SetStatusCode(STATUS_CODE_FAILURE);
+    10002ea4:	4505                	li	a0,1
+    10002ea6:	ad9ff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:77
+        HAL_SetResultInfo("get isvalid fail", 16);
+    10002eaa:	10002537          	lui	a0,0x10002
+    10002eae:	45c1                	li	a1,16
+    10002eb0:	2c050513          	addi	a0,a0,704 # 100022c0 <flist+0x98>
+    10002eb4:	afdff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:78
+        return ret;
+    10002eb8:	b7f1                	j	10002e84 <is_exception+0x10c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:90
+        HAL_SetStatusCode(STATUS_CODE_FAILURE);
+    10002eba:	4505                	li	a0,1
+    10002ebc:	ac3ff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:91
+        HAL_SetResultInfo("get is_restrict fail", 16);
+    10002ec0:	10002537          	lui	a0,0x10002
+    10002ec4:	45c1                	li	a1,16
+    10002ec6:	31050513          	addi	a0,a0,784 # 10002310 <flist+0xe8>
+    10002eca:	ae7ff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:92
+        return ret;
+    10002ece:	bf5d                	j	10002e84 <is_exception+0x10c>
+
+0000000010002ed0 <BAEC_strcmp>:
+BAEC_strcmp():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:101
+    for (int i = 0; i < len; ++i) {
+    10002ed0:	c219                	beqz	a2,10002ed6 <BAEC_strcmp+0x6>
+    10002ed2:	cd3ff06f          	j	10002ba4 <BAEC_strcmp.part.0>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:111
+}
+    10002ed6:	4501                	li	a0,0
+    10002ed8:	8082                	ret
+
+0000000010002eda <get_price>:
+get_price():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:114
+{
+    10002eda:	7139                	addi	sp,sp,-64
+    10002edc:	f822                	sd	s0,48(sp)
+    10002ede:	10002437          	lui	s0,0x10002
+    10002ee2:	f426                	sd	s1,40(sp)
+    10002ee4:	f04a                	sd	s2,32(sp)
+    10002ee6:	ec4e                	sd	s3,24(sp)
+    10002ee8:	e852                	sd	s4,16(sp)
+    10002eea:	e456                	sd	s5,8(sp)
+    10002eec:	fc06                	sd	ra,56(sp)
+    10002eee:	0c840a93          	addi	s5,s0,200 # 100020c8 <BEIJING_DISTRICT>
+    10002ef2:	89aa                	mv	s3,a0
+    10002ef4:	892e                	mv	s2,a1
+    10002ef6:	0c840413          	addi	s0,s0,200
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:115
+    for (int i = 0; i < 16; i++) {
+    10002efa:	4481                	li	s1,0
+    10002efc:	4a41                	li	s4,16
+BAEC_strcmp():
+    10002efe:	8522                	mv	a0,s0
+    10002f00:	85ce                	mv	a1,s3
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:101
+    for (int i = 0; i < len; ++i) {
+    10002f02:	00090b63          	beqz	s2,10002f18 <get_price+0x3e>
+    10002f06:	c9fff0ef          	jal	ra,10002ba4 <BAEC_strcmp.part.0>
+get_price():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:116
+        if (!BAEC_strcmp(BEIJING_DISTRICT[i], district, len))
+    10002f0a:	c519                	beqz	a0,10002f18 <get_price+0x3e>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:115 (discriminator 2)
+    for (int i = 0; i < 16; i++) {
+    10002f0c:	2485                	addiw	s1,s1,1
+    10002f0e:	0439                	addi	s0,s0,14
+    10002f10:	ff4497e3          	bne	s1,s4,10002efe <get_price+0x24>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:119
+    return 0;
+    10002f14:	4501                	li	a0,0
+    10002f16:	a021                	j	10002f1e <get_price+0x44>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:117
+            return BEIJING_DISTRICT_PRICE[i];
+    10002f18:	048e                	slli	s1,s1,0x3
+    10002f1a:	94d6                	add	s1,s1,s5
+    10002f1c:	70e8                	ld	a0,224(s1)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:120
+}
+    10002f1e:	70e2                	ld	ra,56(sp)
+    10002f20:	7442                	ld	s0,48(sp)
+    10002f22:	74a2                	ld	s1,40(sp)
+    10002f24:	7902                	ld	s2,32(sp)
+    10002f26:	69e2                	ld	s3,24(sp)
+    10002f28:	6a42                	ld	s4,16(sp)
+    10002f2a:	6aa2                	ld	s5,8(sp)
+    10002f2c:	6121                	addi	sp,sp,64
+    10002f2e:	8082                	ret
+
+0000000010002f30 <is_mortagage>:
+is_mortagage():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:123
+{
+    10002f30:	da010113          	addi	sp,sp,-608
+    10002f34:	24813823          	sd	s0,592(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:129
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "is_mortgage", 11, sql, &sql_len);
+    10002f38:	1060                	addi	s0,sp,44
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:123
+{
+    10002f3a:	24913423          	sd	s1,584(sp)
+    10002f3e:	25213023          	sd	s2,576(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:129
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "is_mortgage", 11, sql, &sql_len);
+    10002f42:	e422                	sd	s0,8(sp)
+    10002f44:	10002937          	lui	s2,0x10002
+    10002f48:	1800                	addi	s0,sp,48
+    10002f4a:	100024b7          	lui	s1,0x10002
+    10002f4e:	10002837          	lui	a6,0x10002
+    10002f52:	87ae                	mv	a5,a1
+    10002f54:	872a                	mv	a4,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:123
+{
+    10002f56:	23313c23          	sd	s3,568(sp)
+    10002f5a:	23413823          	sd	s4,560(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:129
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "is_mortgage", 11, sql, &sql_len);
+    10002f5e:	48ad                	li	a7,11
+    10002f60:	32880813          	addi	a6,a6,808 # 10002328 <flist+0x100>
+    10002f64:	4699                	li	a3,6
+    10002f66:	2b090613          	addi	a2,s2,688 # 100022b0 <flist+0x88>
+    10002f6a:	e022                	sd	s0,0(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:123
+{
+    10002f6c:	89aa                	mv	s3,a0
+    10002f6e:	8a2e                	mv	s4,a1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:129
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "is_mortgage", 11, sql, &sql_len);
+    10002f70:	2b848513          	addi	a0,s1,696 # 100022b8 <flist+0x90>
+    10002f74:	4599                	li	a1,6
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:123
+{
+    10002f76:	24113c23          	sd	ra,600(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:129
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "is_mortgage", 11, sql, &sql_len);
+    10002f7a:	ce3ff0ef          	jal	ra,10002c5c <assemble_sql>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:130
+    uint32_t ret = HAL_GetState(sql, sql_len, is_mortgage, &len);
+    10002f7e:	55b2                	lw	a1,44(sp)
+    10002f80:	1034                	addi	a3,sp,40
+    10002f82:	0830                	addi	a2,sp,24
+    10002f84:	1808                	addi	a0,sp,48
+    10002f86:	ffaff0ef          	jal	ra,10002780 <HAL_GetState>
+    10002f8a:	0005041b          	sext.w	s0,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:131
+    if (ret != 0) {
+    10002f8e:	e835                	bnez	s0,10003002 <is_mortagage+0xd2>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:136
+    assemble_sql("estate", 6, "certno", 6, certno, certno_len, "is_mortforecast", 15, sql, &sql_len);
+    10002f90:	1074                	addi	a3,sp,44
+    10002f92:	e436                	sd	a3,8(sp)
+    10002f94:	10002837          	lui	a6,0x10002
+    10002f98:	1814                	addi	a3,sp,48
+    10002f9a:	48bd                	li	a7,15
+    10002f9c:	35080813          	addi	a6,a6,848 # 10002350 <flist+0x128>
+    10002fa0:	87d2                	mv	a5,s4
+    10002fa2:	874e                	mv	a4,s3
+    10002fa4:	2b090613          	addi	a2,s2,688
+    10002fa8:	4599                	li	a1,6
+    10002faa:	2b848513          	addi	a0,s1,696
+    10002fae:	e036                	sd	a3,0(sp)
+    10002fb0:	4699                	li	a3,6
+    10002fb2:	cabff0ef          	jal	ra,10002c5c <assemble_sql>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:137
+    ret = HAL_GetState(sql, sql_len, is_mortforecast, &len);
+    10002fb6:	55b2                	lw	a1,44(sp)
+    10002fb8:	1034                	addi	a3,sp,40
+    10002fba:	1010                	addi	a2,sp,32
+    10002fbc:	1808                	addi	a0,sp,48
+    10002fbe:	fc2ff0ef          	jal	ra,10002780 <HAL_GetState>
+    10002fc2:	0005041b          	sext.w	s0,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:138
+    if (ret != 0) {
+    10002fc6:	e829                	bnez	s0,10003018 <is_mortagage+0xe8>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:143
+    return is_mortgage[0] == '1' || is_mortforecast[0] == '1';
+    10002fc8:	01814703          	lbu	a4,24(sp)
+    10002fcc:	03100793          	li	a5,49
+    10002fd0:	4405                	li	s0,1
+    10002fd2:	00f70863          	beq	a4,a5,10002fe2 <is_mortagage+0xb2>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:143 (discriminator 2)
+    10002fd6:	02014403          	lbu	s0,32(sp)
+    10002fda:	fcf40413          	addi	s0,s0,-49
+    10002fde:	00143413          	seqz	s0,s0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:144
+}
+    10002fe2:	8522                	mv	a0,s0
+    10002fe4:	25813083          	ld	ra,600(sp)
+    10002fe8:	25013403          	ld	s0,592(sp)
+    10002fec:	24813483          	ld	s1,584(sp)
+    10002ff0:	24013903          	ld	s2,576(sp)
+    10002ff4:	23813983          	ld	s3,568(sp)
+    10002ff8:	23013a03          	ld	s4,560(sp)
+    10002ffc:	26010113          	addi	sp,sp,608
+    10003000:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:132
+        HAL_SetStatusCode(STATUS_CODE_FAILURE);
+    10003002:	4505                	li	a0,1
+    10003004:	97bff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:133
+        HAL_SetResultInfo("get is_mortgage fail", 20);
+    10003008:	10002537          	lui	a0,0x10002
+    1000300c:	45d1                	li	a1,20
+    1000300e:	33850513          	addi	a0,a0,824 # 10002338 <flist+0x110>
+    10003012:	99fff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:134
+        return ret;
+    10003016:	b7f1                	j	10002fe2 <is_mortagage+0xb2>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:139
+        HAL_SetStatusCode(STATUS_CODE_FAILURE);
+    10003018:	4505                	li	a0,1
+    1000301a:	965ff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:140
+        HAL_SetResultInfo("get is_mortforecast fail", 24);
+    1000301e:	10002537          	lui	a0,0x10002
+    10003022:	45e1                	li	a1,24
+    10003024:	36050513          	addi	a0,a0,864 # 10002360 <flist+0x138>
+    10003028:	989ff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:141
+        return ret;
+    1000302c:	bf5d                	j	10002fe2 <is_mortagage+0xb2>
+
+000000001000302e <classify>:
+classify():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:150
+    if (totle_asset_val <= 500 * MONEY_UNIT_W) {
+    1000302e:	1dcd67b7          	lui	a5,0x1dcd6
+    10003032:	50078793          	addi	a5,a5,1280 # 1dcd6500 <_stack+0xdcc2500>
+    10003036:	02a7e663          	bltu	a5,a0,10003062 <classify+0x34>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:152
+            if (totle_asset_val <= grade_line) {
+    1000303a:	02faf6b7          	lui	a3,0x2faf
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:155
+            grade_line += 50 * MONEY_UNIT_W;
+    1000303e:	05f5e7b7          	lui	a5,0x5f5e
+    10003042:	08068693          	addi	a3,a3,128 # 2faf080 <_start-0xd052f80>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:151
+        for (int i = 1; i < 10; i++) {
+    10003046:	4709                	li	a4,2
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:155
+            grade_line += 50 * MONEY_UNIT_W;
+    10003048:	10078793          	addi	a5,a5,256 # 5f5e100 <_start-0xa0a3f00>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:151
+        for (int i = 1; i < 10; i++) {
+    1000304c:	4629                	li	a2,10
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:152
+            if (totle_asset_val <= grade_line) {
+    1000304e:	04a6fe63          	bleu	a0,a3,100030aa <classify+0x7c>
+    10003052:	02a7f863          	bleu	a0,a5,10003082 <classify+0x54>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:151 (discriminator 2)
+        for (int i = 1; i < 10; i++) {
+    10003056:	2705                	addiw	a4,a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:155 (discriminator 2)
+            grade_line += 50 * MONEY_UNIT_W;
+    10003058:	97b6                	add	a5,a5,a3
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:151 (discriminator 2)
+        for (int i = 1; i < 10; i++) {
+    1000305a:	fec71ce3          	bne	a4,a2,10003052 <classify+0x24>
+    1000305e:	4529                	li	a0,10
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:162
+                return i;
+    10003060:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:159
+    if (totle_asset_val <= 2000 * MONEY_UNIT_W) {
+    10003062:	773596b7          	lui	a3,0x77359
+    10003066:	40068693          	addi	a3,a3,1024 # 77359400 <_stack+0x67345400>
+    1000306a:	00a6ff63          	bleu	a0,a3,10003088 <classify+0x5a>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:176
+    return totle_asset_val <= MONEY_UNIT_Y ? 41 : 42;
+    1000306e:	009507b7          	lui	a5,0x950
+    10003072:	2f978793          	addi	a5,a5,761 # 9502f9 <_start-0xf6b1d07>
+    10003076:	07aa                	slli	a5,a5,0xa
+    10003078:	00a7b533          	sltu	a0,a5,a0
+    1000307c:	02950513          	addi	a0,a0,41
+    10003080:	8082                	ret
+    10003082:	0007051b          	sext.w	a0,a4
+    10003086:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:164
+            grade_line += 100 * MONEY_UNIT_W;
+    10003088:	23c347b7          	lui	a5,0x23c34
+    1000308c:	05f5e637          	lui	a2,0x5f5e
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:160
+        for (int i = 10; i < 25; i++) {
+    10003090:	472d                	li	a4,11
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:164
+            grade_line += 100 * MONEY_UNIT_W;
+    10003092:	60078793          	addi	a5,a5,1536 # 23c34600 <_stack+0x13c20600>
+    10003096:	10060613          	addi	a2,a2,256 # 5f5e100 <_start-0xa0a3f00>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:161
+            if (totle_asset_val <= grade_line) {
+    1000309a:	fea7f4e3          	bleu	a0,a5,10003082 <classify+0x54>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:164 (discriminator 2)
+            grade_line += 100 * MONEY_UNIT_W;
+    1000309e:	97b2                	add	a5,a5,a2
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:160 (discriminator 2)
+        for (int i = 10; i < 25; i++) {
+    100030a0:	2705                	addiw	a4,a4,1
+    100030a2:	fed79ce3          	bne	a5,a3,1000309a <classify+0x6c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:171
+                return i;
+    100030a6:	4565                	li	a0,25
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:177
+}
+    100030a8:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:152
+            if (totle_asset_val <= grade_line) {
+    100030aa:	4505                	li	a0,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:153
+                return i;
+    100030ac:	8082                	ret
+
+00000000100030ae <f1>:
+f1():
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:226
+	volatile char sql[512];
+	volatile uint32_t sql_len;
+	volatile char count_result[4];
+	volatile uint32_t count_result_len;
+    int count = 0;
+    char certno_var[10] = "$$certno_";
+    100030ae:	100027b7          	lui	a5,0x10002
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:218
+{
+    100030b2:	81010113          	addi	sp,sp,-2032
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:226
+    char certno_var[10] = "$$certno_";
+    100030b6:	42078693          	addi	a3,a5,1056 # 10002420 <flist+0x1f8>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:218
+{
+    100030ba:	7b513c23          	sd	s5,1976(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:226
+    char certno_var[10] = "$$certno_";
+    100030be:	4207b703          	ld	a4,1056(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:218
+{
+    100030c2:	7e113423          	sd	ra,2024(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:226
+    char certno_var[10] = "$$certno_";
+    100030c6:	0086d783          	lhu	a5,8(a3)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:218
+{
+    100030ca:	7e813023          	sd	s0,2016(sp)
+    100030ce:	7c913c23          	sd	s1,2008(sp)
+    100030d2:	7d213823          	sd	s2,2000(sp)
+    100030d6:	7d313423          	sd	s3,1992(sp)
+    100030da:	7d413023          	sd	s4,1984(sp)
+    100030de:	7b613823          	sd	s6,1968(sp)
+    100030e2:	7b713423          	sd	s7,1960(sp)
+    100030e6:	7b813023          	sd	s8,1952(sp)
+    100030ea:	79913c23          	sd	s9,1944(sp)
+    100030ee:	79a13823          	sd	s10,1936(sp)
+    100030f2:	1141                	addi	sp,sp,-16
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:229
+    uint32_t certno_var_len = 9;
+    volatile uint64_t estate_price;
+    volatile uint64_t estate_price_sum1 = 0;
+    100030f4:	e882                	sd	zero,80(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:240
+    volatile char index[4];
+    volatile uint32_t index_length;
+    volatile uint32_t area = 0;
+    volatile char result_info[1024];
+
+    uint32_t ret = HAL_GetArgs("qlrzjh", 6, field, &field_len);
+    100030f6:	10002ab7          	lui	s5,0x10002
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:230
+    volatile uint64_t estate_price_sum2 = 0;
+    100030fa:	ec82                	sd	zero,88(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:240
+    uint32_t ret = HAL_GetArgs("qlrzjh", 6, field, &field_len);
+    100030fc:	1074                	addi	a3,sp,44
+    100030fe:	1890                	addi	a2,sp,112
+    10003100:	4599                	li	a1,6
+    10003102:	268a8513          	addi	a0,s5,616 # 10002268 <flist+0x40>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:226
+    char certno_var[10] = "$$certno_";
+    10003106:	f0ba                	sd	a4,96(sp)
+    10003108:	06f11423          	sh	a5,104(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:237
+    volatile uint32_t area = 0;
+    1000310c:	c282                	sw	zero,68(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:240
+    uint32_t ret = HAL_GetArgs("qlrzjh", 6, field, &field_len);
+    1000310e:	d1cff0ef          	jal	ra,1000262a <HAL_GetArgs>
+    10003112:	2501                	sext.w	a0,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:241
+    if (ret != 0) {
+    10003114:	c539                	beqz	a0,10003162 <f1+0xb4>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:242
+        HAL_SetStatusCode(STATUS_CODE_FAILURE);
+    10003116:	4505                	li	a0,1
+    10003118:	867ff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:243
+        HAL_SetResultInfo("get arg fail", 12);
+    1000311c:	10002537          	lui	a0,0x10002
+    10003120:	45b1                	li	a1,12
+    10003122:	27050513          	addi	a0,a0,624 # 10002270 <flist+0x48>
+    10003126:	88bff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:311
+    for (int i = 0; i <estate_estimate_2_len; i++) {
+        result_info[28 + estate_estimate_1_len + 30 + i] = estate_estimate_2[i];
+    }
+    HAL_SetResultInfo(result_info, 28 + estate_estimate_1_len + 30 + estate_estimate_2_len);
+    HAL_SetStatusCode(STATUS_CODE_SUCCESS);
+}
+    1000312a:	0141                	addi	sp,sp,16
+    1000312c:	7e813083          	ld	ra,2024(sp)
+    10003130:	7e013403          	ld	s0,2016(sp)
+    10003134:	7d813483          	ld	s1,2008(sp)
+    10003138:	7d013903          	ld	s2,2000(sp)
+    1000313c:	7c813983          	ld	s3,1992(sp)
+    10003140:	7c013a03          	ld	s4,1984(sp)
+    10003144:	7b813a83          	ld	s5,1976(sp)
+    10003148:	7b013b03          	ld	s6,1968(sp)
+    1000314c:	7a813b83          	ld	s7,1960(sp)
+    10003150:	7a013c03          	ld	s8,1952(sp)
+    10003154:	79813c83          	ld	s9,1944(sp)
+    10003158:	79013d03          	ld	s10,1936(sp)
+    1000315c:	7f010113          	addi	sp,sp,2032
+    10003160:	8082                	ret
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:246
+    assemble_sql("estate", 6, "qlrzjh", 6, field, field_len, "count(*)", 8, sql, &sql_len);
+    10003162:	57b2                	lw	a5,44(sp)
+    10003164:	1304                	addi	s1,sp,416
+    10003166:	03010a13          	addi	s4,sp,48
+    1000316a:	100029b7          	lui	s3,0x10002
+    1000316e:	10002837          	lui	a6,0x10002
+    10003172:	48a1                	li	a7,8
+    10003174:	3c080813          	addi	a6,a6,960 # 100023c0 <flist+0x198>
+    10003178:	2781                	sext.w	a5,a5
+    1000317a:	1898                	addi	a4,sp,112
+    1000317c:	4699                	li	a3,6
+    1000317e:	268a8613          	addi	a2,s5,616
+    10003182:	4599                	li	a1,6
+    10003184:	2b898513          	addi	a0,s3,696 # 100022b8 <flist+0x90>
+    10003188:	e452                	sd	s4,8(sp)
+    1000318a:	e026                	sd	s1,0(sp)
+    1000318c:	ad1ff0ef          	jal	ra,10002c5c <assemble_sql>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:247
+    ret = HAL_GetState(sql, sql_len, count_result, &count_result_len);
+    10003190:	55c2                	lw	a1,48(sp)
+    10003192:	1854                	addi	a3,sp,52
+    10003194:	1010                	addi	a2,sp,32
+    10003196:	8526                	mv	a0,s1
+    10003198:	de8ff0ef          	jal	ra,10002780 <HAL_GetState>
+    1000319c:	2501                	sext.w	a0,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:248
+    if (ret != 0) {
+    1000319e:	28051363          	bnez	a0,10003424 <f1+0x376>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:253
+    for (int i = 0; i < count_result_len; i++) {
+    100031a2:	57d2                	lw	a5,52(sp)
+    100031a4:	4701                	li	a4,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:225
+    int count = 0;
+    100031a6:	4901                	li	s2,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:253
+    for (int i = 0; i < count_result_len; i++) {
+    100031a8:	2781                	sext.w	a5,a5
+    100031aa:	c3e1                	beqz	a5,1000326a <f1+0x1bc>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:254 (discriminator 3)
+        count = count * 10 + count_result[i] - '0';
+    100031ac:	7a010793          	addi	a5,sp,1952
+    100031b0:	97ba                	add	a5,a5,a4
+    100031b2:	8807c683          	lbu	a3,-1920(a5)
+    100031b6:	0029179b          	slliw	a5,s2,0x2
+    100031ba:	0127893b          	addw	s2,a5,s2
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:253 (discriminator 3)
+    for (int i = 0; i < count_result_len; i++) {
+    100031be:	57d2                	lw	a5,52(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:254 (discriminator 3)
+        count = count * 10 + count_result[i] - '0';
+    100031c0:	0019191b          	slliw	s2,s2,0x1
+    100031c4:	00d9093b          	addw	s2,s2,a3
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:253 (discriminator 3)
+    for (int i = 0; i < count_result_len; i++) {
+    100031c8:	2705                	addiw	a4,a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:254 (discriminator 3)
+        count = count * 10 + count_result[i] - '0';
+    100031ca:	fd09091b          	addiw	s2,s2,-48
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:253 (discriminator 3)
+    for (int i = 0; i < count_result_len; i++) {
+    100031ce:	fcf76fe3          	bltu	a4,a5,100031ac <f1+0xfe>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:256
+    for (int i = 0; i < count; i++) {
+    100031d2:	09205c63          	blez	s2,1000326a <f1+0x1bc>
+    100031d6:	4401                	li	s0,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:227
+    uint32_t certno_var_len = 9;
+    100031d8:	4ca5                	li	s9,9
+    100031da:	10002b37          	lui	s6,0x10002
+    100031de:	4d01                	li	s10,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:271
+        assemble_sql("estate", 6, "certno", 6, certno_var, certno_var_len, "zl", 2, sql, &sql_len);
+    100031e0:	10002bb7          	lui	s7,0x10002
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:279
+        assemble_sql("estate", 6, "certno", 6, certno_var, certno_var_len, "jzmj", 4, sql, &sql_len);
+    100031e4:	10002c37          	lui	s8,0x10002
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:257
+        assemble_sql("estate", 6, "qlrzjh", 6, field, field_len, "certno", 6, sql, &sql_len);
+    100031e8:	57b2                	lw	a5,44(sp)
+    100031ea:	4899                	li	a7,6
+    100031ec:	2b0b0813          	addi	a6,s6,688 # 100022b0 <flist+0x88>
+    100031f0:	2781                	sext.w	a5,a5
+    100031f2:	1898                	addi	a4,sp,112
+    100031f4:	4699                	li	a3,6
+    100031f6:	268a8613          	addi	a2,s5,616
+    100031fa:	4599                	li	a1,6
+    100031fc:	2b898513          	addi	a0,s3,696
+    10003200:	e452                	sd	s4,8(sp)
+    10003202:	e026                	sd	s1,0(sp)
+    10003204:	a59ff0ef          	jal	ra,10002c5c <assemble_sql>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:258
+        ret = HAL_GetStateAt(sql, sql_len, field, &field_len, i);
+    10003208:	55c2                	lw	a1,48(sp)
+    1000320a:	876a                	mv	a4,s10
+    1000320c:	1074                	addi	a3,sp,44
+    1000320e:	1890                	addi	a2,sp,112
+    10003210:	8526                	mv	a0,s1
+    10003212:	d3eff0ef          	jal	ra,10002750 <HAL_GetStateAt>
+    10003216:	2501                	sext.w	a0,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:259
+        if (ret != 0) {
+    10003218:	22051163          	bnez	a0,1000343a <f1+0x38c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:264
+        num2str(i, index, &index_length);
+    1000321c:	0090                	addi	a2,sp,64
+    1000321e:	102c                	addi	a1,sp,40
+    10003220:	8522                	mv	a0,s0
+    10003222:	9c3ff0ef          	jal	ra,10002be4 <num2str>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:265
+        for (int j = 0; j < index_length; j++) {
+    10003226:	4786                	lw	a5,64(sp)
+    10003228:	2781                	sext.w	a5,a5
+    1000322a:	c785                	beqz	a5,10003252 <f1+0x1a4>
+    1000322c:	4781                	li	a5,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:266 (discriminator 3)
+            certno_var[certno_var_len++] = index[j];
+    1000322e:	7a010713          	addi	a4,sp,1952
+    10003232:	973e                	add	a4,a4,a5
+    10003234:	88874603          	lbu	a2,-1912(a4)
+    10003238:	020c9713          	slli	a4,s9,0x20
+    1000323c:	9301                	srli	a4,a4,0x20
+    1000323e:	7a010593          	addi	a1,sp,1952
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:265 (discriminator 3)
+        for (int j = 0; j < index_length; j++) {
+    10003242:	4686                	lw	a3,64(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:266 (discriminator 3)
+            certno_var[certno_var_len++] = index[j];
+    10003244:	972e                	add	a4,a4,a1
+    10003246:	8cc70023          	sb	a2,-1856(a4)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:265 (discriminator 3)
+        for (int j = 0; j < index_length; j++) {
+    1000324a:	2785                	addiw	a5,a5,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:266 (discriminator 3)
+            certno_var[certno_var_len++] = index[j];
+    1000324c:	2c85                	addiw	s9,s9,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:265 (discriminator 3)
+        for (int j = 0; j < index_length; j++) {
+    1000324e:	fed7e0e3          	bltu	a5,a3,1000322e <f1+0x180>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:268
+        if (is_exception(certno_var, certno_var_len)) {
+    10003252:	85e6                	mv	a1,s9
+    10003254:	1088                	addi	a0,sp,96
+    10003256:	b23ff0ef          	jal	ra,10002d78 <is_exception>
+    1000325a:	2501                	sext.w	a0,a0
+    1000325c:	10050063          	beqz	a0,1000335c <f1+0x2ae>
+    10003260:	0405                	addi	s0,s0,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:256 (discriminator 2)
+    for (int i = 0; i < count; i++) {
+    10003262:	00040d1b          	sext.w	s10,s0
+    10003266:	f92d41e3          	blt	s10,s2,100031e8 <f1+0x13a>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:295
+    num2str(classify(estate_price_sum1), estate_estimate_1, &estate_estimate_1_len);
+    1000326a:	6546                	ld	a0,80(sp)
+    1000326c:	dc3ff0ef          	jal	ra,1000302e <classify>
+    10003270:	1502                	slli	a0,a0,0x20
+    10003272:	1830                	addi	a2,sp,56
+    10003274:	080c                	addi	a1,sp,16
+    10003276:	9101                	srli	a0,a0,0x20
+    10003278:	96dff0ef          	jal	ra,10002be4 <num2str>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:296
+    num2str(classify(estate_price_sum2), estate_estimate_2, &estate_estimate_2_len);
+    1000327c:	6566                	ld	a0,88(sp)
+    1000327e:	db1ff0ef          	jal	ra,1000302e <classify>
+    10003282:	1502                	slli	a0,a0,0x20
+    10003284:	082c                	addi	a1,sp,24
+    10003286:	1870                	addi	a2,sp,60
+    10003288:	9101                	srli	a0,a0,0x20
+    1000328a:	95bff0ef          	jal	ra,10002be4 <num2str>
+    1000328e:	10002737          	lui	a4,0x10002
+    10003292:	3a170713          	addi	a4,a4,929 # 100023a1 <flist+0x179>
+    10003296:	06500693          	li	a3,101
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:297
+    for (int i = 0; i < 28; i++) {
+    1000329a:	4781                	li	a5,0
+    1000329c:	45f1                	li	a1,28
+    1000329e:	a021                	j	100032a6 <f1+0x1f8>
+    100032a0:	00074683          	lbu	a3,0(a4)
+    100032a4:	0705                	addi	a4,a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:298 (discriminator 3)
+        result_info[i] = "estate estimate range 1 is: "[i];
+    100032a6:	7a010613          	addi	a2,sp,1952
+    100032aa:	963e                	add	a2,a2,a5
+    100032ac:	c0d60023          	sb	a3,-1024(a2)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:297 (discriminator 3)
+    for (int i = 0; i < 28; i++) {
+    100032b0:	2785                	addiw	a5,a5,1
+    100032b2:	feb797e3          	bne	a5,a1,100032a0 <f1+0x1f2>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:300
+    for (int i = 0; i < estate_estimate_1_len; i++) {
+    100032b6:	57e2                	lw	a5,56(sp)
+    100032b8:	2781                	sext.w	a5,a5
+    100032ba:	c395                	beqz	a5,100032de <f1+0x230>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:301
+        result_info[28 + i] = estate_estimate_1[i];
+    100032bc:	01014783          	lbu	a5,16(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:300
+    for (int i = 0; i < estate_estimate_1_len; i++) {
+    100032c0:	4705                	li	a4,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:301
+        result_info[28 + i] = estate_estimate_1[i];
+    100032c2:	0ff7f793          	andi	a5,a5,255
+    100032c6:	3af10e23          	sb	a5,956(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:300
+    for (int i = 0; i < estate_estimate_1_len; i++) {
+    100032ca:	57e2                	lw	a5,56(sp)
+    100032cc:	00f77963          	bleu	a5,a4,100032de <f1+0x230>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:301 (discriminator 3)
+        result_info[28 + i] = estate_estimate_1[i];
+    100032d0:	01114783          	lbu	a5,17(sp)
+    100032d4:	0ff7f793          	andi	a5,a5,255
+    100032d8:	3af10ea3          	sb	a5,957(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:300 (discriminator 3)
+    for (int i = 0; i < estate_estimate_1_len; i++) {
+    100032dc:	57e2                	lw	a5,56(sp)
+    100032de:	100026b7          	lui	a3,0x10002
+    100032e2:	38168693          	addi	a3,a3,897 # 10002381 <flist+0x159>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:297
+    for (int i = 0; i < 28; i++) {
+    100032e6:	02c00613          	li	a2,44
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:303
+    for (int i = 0; i < 30; i++) {
+    100032ea:	4701                	li	a4,0
+    100032ec:	45f9                	li	a1,30
+    100032ee:	a021                	j	100032f6 <f1+0x248>
+    100032f0:	0006c603          	lbu	a2,0(a3)
+    100032f4:	0685                	addi	a3,a3,1
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:304 (discriminator 3)
+        result_info[28 + estate_estimate_1_len + i] = ", estate estimate range 2 is: "[i];
+    100032f6:	57e2                	lw	a5,56(sp)
+    100032f8:	7a010513          	addi	a0,sp,1952
+    100032fc:	27f1                	addiw	a5,a5,28
+    100032fe:	9fb9                	addw	a5,a5,a4
+    10003300:	1782                	slli	a5,a5,0x20
+    10003302:	9381                	srli	a5,a5,0x20
+    10003304:	97aa                	add	a5,a5,a0
+    10003306:	c0c78023          	sb	a2,-1024(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:303 (discriminator 3)
+    for (int i = 0; i < 30; i++) {
+    1000330a:	2705                	addiw	a4,a4,1
+    1000330c:	feb712e3          	bne	a4,a1,100032f0 <f1+0x242>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:306
+    for (int i = 0; i <estate_estimate_2_len; i++) {
+    10003310:	57f2                	lw	a5,60(sp)
+    10003312:	2781                	sext.w	a5,a5
+    10003314:	cb85                	beqz	a5,10003344 <f1+0x296>
+    10003316:	4701                	li	a4,0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:307 (discriminator 3)
+        result_info[28 + estate_estimate_1_len + 30 + i] = estate_estimate_2[i];
+    10003318:	57e2                	lw	a5,56(sp)
+    1000331a:	7a010693          	addi	a3,sp,1952
+    1000331e:	96ba                	add	a3,a3,a4
+    10003320:	03a7879b          	addiw	a5,a5,58
+    10003324:	8786c683          	lbu	a3,-1928(a3)
+    10003328:	9fb9                	addw	a5,a5,a4
+    1000332a:	1782                	slli	a5,a5,0x20
+    1000332c:	9381                	srli	a5,a5,0x20
+    1000332e:	7a010613          	addi	a2,sp,1952
+    10003332:	97b2                	add	a5,a5,a2
+    10003334:	0ff6f693          	andi	a3,a3,255
+    10003338:	c0d78023          	sb	a3,-1024(a5)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:306 (discriminator 3)
+    for (int i = 0; i <estate_estimate_2_len; i++) {
+    1000333c:	57f2                	lw	a5,60(sp)
+    1000333e:	2705                	addiw	a4,a4,1
+    10003340:	fcf76ce3          	bltu	a4,a5,10003318 <f1+0x26a>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:309
+    HAL_SetResultInfo(result_info, 28 + estate_estimate_1_len + 30 + estate_estimate_2_len);
+    10003344:	55e2                	lw	a1,56(sp)
+    10003346:	57f2                	lw	a5,60(sp)
+    10003348:	1708                	addi	a0,sp,928
+    1000334a:	9dbd                	addw	a1,a1,a5
+    1000334c:	03a5859b          	addiw	a1,a1,58
+    10003350:	e60ff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:310
+    HAL_SetStatusCode(STATUS_CODE_SUCCESS);
+    10003354:	4501                	li	a0,0
+    10003356:	e28ff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+    1000335a:	bbc1                	j	1000312a <f1+0x7c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:271
+        assemble_sql("estate", 6, "certno", 6, certno_var, certno_var_len, "zl", 2, sql, &sql_len);
+    1000335c:	4889                	li	a7,2
+    1000335e:	3e0b8813          	addi	a6,s7,992 # 100023e0 <flist+0x1b8>
+    10003362:	87e6                	mv	a5,s9
+    10003364:	1098                	addi	a4,sp,96
+    10003366:	4699                	li	a3,6
+    10003368:	2b0b0613          	addi	a2,s6,688
+    1000336c:	4599                	li	a1,6
+    1000336e:	2b898513          	addi	a0,s3,696
+    10003372:	e452                	sd	s4,8(sp)
+    10003374:	e026                	sd	s1,0(sp)
+    10003376:	8e7ff0ef          	jal	ra,10002c5c <assemble_sql>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:272
+        ret = HAL_GetState(sql, sql_len, field, &field_len);
+    1000337a:	55c2                	lw	a1,48(sp)
+    1000337c:	1074                	addi	a3,sp,44
+    1000337e:	1890                	addi	a2,sp,112
+    10003380:	8526                	mv	a0,s1
+    10003382:	bfeff0ef          	jal	ra,10002780 <HAL_GetState>
+    10003386:	2501                	sext.w	a0,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:273
+        if (ret != 0) {
+    10003388:	0c051f63          	bnez	a0,10003466 <f1+0x3b8>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:278
+        estate_price = get_price(field, field_len);
+    1000338c:	55b2                	lw	a1,44(sp)
+    1000338e:	1888                	addi	a0,sp,112
+    10003390:	b4bff0ef          	jal	ra,10002eda <get_price>
+    10003394:	832a                	mv	t1,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:279
+        assemble_sql("estate", 6, "certno", 6, certno_var, certno_var_len, "jzmj", 4, sql, &sql_len);
+    10003396:	4891                	li	a7,4
+    10003398:	400c0813          	addi	a6,s8,1024 # 10002400 <flist+0x1d8>
+    1000339c:	87e6                	mv	a5,s9
+    1000339e:	1098                	addi	a4,sp,96
+    100033a0:	4699                	li	a3,6
+    100033a2:	2b0b0613          	addi	a2,s6,688
+    100033a6:	4599                	li	a1,6
+    100033a8:	2b898513          	addi	a0,s3,696
+    100033ac:	e452                	sd	s4,8(sp)
+    100033ae:	e026                	sd	s1,0(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:278
+        estate_price = get_price(field, field_len);
+    100033b0:	e49a                	sd	t1,72(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:279
+        assemble_sql("estate", 6, "certno", 6, certno_var, certno_var_len, "jzmj", 4, sql, &sql_len);
+    100033b2:	8abff0ef          	jal	ra,10002c5c <assemble_sql>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:280
+        ret = HAL_GetState(sql, sql_len, field, &field_len);
+    100033b6:	55c2                	lw	a1,48(sp)
+    100033b8:	1074                	addi	a3,sp,44
+    100033ba:	1890                	addi	a2,sp,112
+    100033bc:	8526                	mv	a0,s1
+    100033be:	bc2ff0ef          	jal	ra,10002780 <HAL_GetState>
+    100033c2:	2501                	sext.w	a0,a0
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:281
+        if (ret != 0) {
+    100033c4:	e551                	bnez	a0,10003450 <f1+0x3a2>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:286
+        for (int j = 0; j < field_len; j++) {
+    100033c6:	57b2                	lw	a5,44(sp)
+    100033c8:	4701                	li	a4,0
+    100033ca:	2781                	sext.w	a5,a5
+    100033cc:	c785                	beqz	a5,100033f4 <f1+0x346>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:287 (discriminator 3)
+            area = area * 10 + field[j] - '0';
+    100033ce:	4696                	lw	a3,68(sp)
+    100033d0:	7a010793          	addi	a5,sp,1952
+    100033d4:	97ba                	add	a5,a5,a4
+    100033d6:	8d07c603          	lbu	a2,-1840(a5)
+    100033da:	0026979b          	slliw	a5,a3,0x2
+    100033de:	9fb5                	addw	a5,a5,a3
+    100033e0:	0017979b          	slliw	a5,a5,0x1
+    100033e4:	fd07879b          	addiw	a5,a5,-48
+    100033e8:	9fb1                	addw	a5,a5,a2
+    100033ea:	c2be                	sw	a5,68(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:286 (discriminator 3)
+        for (int j = 0; j < field_len; j++) {
+    100033ec:	57b2                	lw	a5,44(sp)
+    100033ee:	2705                	addiw	a4,a4,1
+    100033f0:	fcf76fe3          	bltu	a4,a5,100033ce <f1+0x320>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:289
+        if (is_mortagage(certno_var, certno_var_len)) {
+    100033f4:	85e6                	mv	a1,s9
+    100033f6:	1088                	addi	a0,sp,96
+    100033f8:	b39ff0ef          	jal	ra,10002f30 <is_mortagage>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:290
+            estate_price_sum2 += area * estate_price;
+    100033fc:	4796                	lw	a5,68(sp)
+    100033fe:	66a6                	ld	a3,72(sp)
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:289
+        if (is_mortagage(certno_var, certno_var_len)) {
+    10003400:	2501                	sext.w	a0,a0
+    10003402:	c909                	beqz	a0,10003414 <f1+0x366>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:290
+            estate_price_sum2 += area * estate_price;
+    10003404:	1782                	slli	a5,a5,0x20
+    10003406:	9381                	srli	a5,a5,0x20
+    10003408:	02d787b3          	mul	a5,a5,a3
+    1000340c:	6766                	ld	a4,88(sp)
+    1000340e:	97ba                	add	a5,a5,a4
+    10003410:	ecbe                	sd	a5,88(sp)
+    10003412:	b5b9                	j	10003260 <f1+0x1b2>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:292
+            estate_price_sum1 += area * estate_price;
+    10003414:	1782                	slli	a5,a5,0x20
+    10003416:	9381                	srli	a5,a5,0x20
+    10003418:	02d787b3          	mul	a5,a5,a3
+    1000341c:	6746                	ld	a4,80(sp)
+    1000341e:	97ba                	add	a5,a5,a4
+    10003420:	e8be                	sd	a5,80(sp)
+    10003422:	bd3d                	j	10003260 <f1+0x1b2>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:249
+        HAL_SetStatusCode(STATUS_CODE_FAILURE);
+    10003424:	4505                	li	a0,1
+    10003426:	d58ff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:250
+        HAL_SetResultInfo("get count_result fail", 21);
+    1000342a:	10002537          	lui	a0,0x10002
+    1000342e:	45d5                	li	a1,21
+    10003430:	28050513          	addi	a0,a0,640 # 10002280 <flist+0x58>
+    10003434:	d7cff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:251
+        return;
+    10003438:	b9cd                	j	1000312a <f1+0x7c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:260
+            HAL_SetStatusCode(STATUS_CODE_FAILURE);
+    1000343a:	4505                	li	a0,1
+    1000343c:	d42ff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:261
+            HAL_SetResultInfo("get certno fail", 15);
+    10003440:	10002537          	lui	a0,0x10002
+    10003444:	45bd                	li	a1,15
+    10003446:	3d050513          	addi	a0,a0,976 # 100023d0 <flist+0x1a8>
+    1000344a:	d66ff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:262
+            return;
+    1000344e:	b9f1                	j	1000312a <f1+0x7c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:282
+            HAL_SetStatusCode(STATUS_CODE_FAILURE);
+    10003450:	4505                	li	a0,1
+    10003452:	d2cff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:283
+            HAL_SetResultInfo("get area_result fail", 20);
+    10003456:	10002537          	lui	a0,0x10002
+    1000345a:	45d1                	li	a1,20
+    1000345c:	40850513          	addi	a0,a0,1032 # 10002408 <flist+0x1e0>
+    10003460:	d50ff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:284
+            return;
+    10003464:	b1d9                	j	1000312a <f1+0x7c>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:274
+            HAL_SetStatusCode(STATUS_CODE_FAILURE);
+    10003466:	4505                	li	a0,1
+    10003468:	d16ff0ef          	jal	ra,1000297e <HAL_SetStatusCode>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:275
+            HAL_SetResultInfo("get district fail", 17);
+    1000346c:	10002537          	lui	a0,0x10002
+    10003470:	45c5                	li	a1,17
+    10003472:	3e850513          	addi	a0,a0,1000 # 100023e8 <flist+0x1c0>
+    10003476:	d3aff0ef          	jal	ra,100029b0 <HAL_SetResultInfo>
+/home/boom/projects/hd/riscv-contract-evn/contract_demo/ContractDemo/Debug/../confident_contract/test.c:276
+            return;
+    1000347a:	b945                	j	1000312a <f1+0x7c>
