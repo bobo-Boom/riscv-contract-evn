@@ -95,6 +95,7 @@ uint32_t HAL_GetStateAt(char *k, uint32_t klen, char *v, uint32_t *vlen, uint32_
         HAL_SetErrCode(PARAM_LEN_ERROR);
         return PARAM_LEN_ERROR;
     }
+    //tx
     volatile uint32_t *addr_offset = (uint32_t *) (ADDR_HEADER + sizeof(uint32_t));
     addr_offset = (uint32_t *)((uint64_t)addr_offset + (sizeof(uint32_t)*3 + KEY_MAX_LEN + VALUE_MAX_LEN) * mtd_param_count);
     int find = 0;
@@ -104,6 +105,7 @@ uint32_t HAL_GetStateAt(char *k, uint32_t klen, char *v, uint32_t *vlen, uint32_
     volatile char *tx_arg_key;
     volatile char *tx_arg_value;
     volatile uint32_t *empty_offset = (uint32_t *) -1;
+
     for (int i = mtd_param_count; i < DATA_COUNT; i++) {
         tx_arg_flag = (uint32_t *)addr_offset;
         addr_offset = (uint32_t *)((uint64_t)addr_offset + sizeof(uint32_t));    // flag_len
@@ -126,7 +128,7 @@ uint32_t HAL_GetStateAt(char *k, uint32_t klen, char *v, uint32_t *vlen, uint32_
         addr_offset = (uint32_t *)((uint64_t)addr_offset + KEY_MAX_LEN);
         tx_arg_value = (char *)addr_offset;
         addr_offset = (uint32_t *)((uint64_t)addr_offset + VALUE_MAX_LEN);
-        if ((0xff & *tx_arg_flag) == READ_FLAG && klen == *tx_arg_klen) {
+        if ((0xff & *tx_arg_flag) == READ_FLAG && klen == *tx_arg_klen) {  //find key
             int flag = 0;
             for (int j = 0; j < klen; j++) {
                 flag = *(unsigned char*)tx_arg_key - *(unsigned char*)k;
